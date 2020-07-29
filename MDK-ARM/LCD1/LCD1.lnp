@@ -5,6 +5,7 @@
 "lcd1\stm32f1xx_hal_msp.o"
 "lcd1\fonts.o"
 "lcd1\st7735.o"
+"lcd1\uicode.o"
 "lcd1\stm32f1xx_hal_gpio_ex.o"
 "lcd1\stm32f1xx_hal_spi.o"
 "lcd1\stm32f1xx_hal_tim.o"
