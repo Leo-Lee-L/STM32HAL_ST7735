@@ -24,24 +24,21 @@ Section Cross References
     main.o(i.SystemClock_Config) refers to memseta.o(.text) for __aeabi_memclr4
     main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
     main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
+    main.o(i.delay_ms) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
+    main.o(i.gfx_draw_pixel) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
     main.o(i.init) refers to st7735.o(i.ST7735_Init) for ST7735_Init
     main.o(i.init) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
     main.o(i.init) refers to main.o(.bss) for .bss
-    main.o(i.loop) refers to st7735.o(i.ST7735_FillScreen) for ST7735_FillScreen
-    main.o(i.loop) refers to st7735.o(i.ST7735_DrawPixel) for ST7735_DrawPixel
-    main.o(i.loop) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
-    main.o(i.loop) refers to st7735.o(i.ST7735_WriteString) for ST7735_WriteString
-    main.o(i.loop) refers to fonts.o(.data) for Font_7x10
-    main.o(i.loop) refers to fonts.o(.data) for Font_11x18
-    main.o(i.loop) refers to fonts.o(.data) for Font_16x26
     main.o(i.main) refers to stm32f1xx_hal.o(i.HAL_Init) for HAL_Init
     main.o(i.main) refers to main.o(i.SystemClock_Config) for SystemClock_Config
     main.o(i.main) refers to main.o(i.MX_GPIO_Init) for MX_GPIO_Init
     main.o(i.main) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Init) for HAL_UART_Init
     main.o(i.main) refers to main.o(i.MX_SPI1_Init) for MX_SPI1_Init
+    main.o(i.main) refers to stm32f1xx_hal.o(i.HAL_Delay) for HAL_Delay
     main.o(i.main) refers to main.o(i.init) for init
-    main.o(i.main) refers to main.o(i.loop) for loop
     main.o(i.main) refers to main.o(.bss) for .bss
+    main.o(i.main) refers to main.o(i.gfx_draw_pixel) for gfx_draw_pixel
+    main.o(i.main) refers to main.o(.data) for .data
     stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f1xx_hal_msp.o(i.HAL_SPI_MspDeInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_DeInit) for HAL_GPIO_DeInit
     stm32f1xx_hal_msp.o(i.HAL_SPI_MspInit) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
@@ -346,6 +343,172 @@ Section Cross References
     stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
     system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.data) for .data
     system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.constdata) for .constdata
+    uicode.o(i._Z11projectOnXYPdS_d) refers to uicode.o(i._Z8multiplyiiiPdS_S_) for multiply(int, int, int, double*, double*, double*)
+    uicode.o(i._Z11projectOnXYPdS_d) refers to uicode.o(.bss) for .bss
+    uicode.o(i._Z12thread_sleepj) refers to main.o(i.delay_ms) for delay_ms
+    uicode.o(i._Z13create_threadPmPvPFS0_S0_ES0_) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._Z13second_to_dayl) refers to memcpya.o(.text) for __aeabi_memcpy
+    uicode.o(i._Z14register_timeriPFvPvS_E) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._Z16start_real_timerPFvPvE) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._Z17get_cur_thread_idv) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._Z23register_debug_functionPFvPKciEPFvS0_E) refers to uicode.o(.data) for .data
+    uicode.o(i._Z7_assertPKci) refers to uicode.o(.data) for .data
+    uicode.o(i._Z7log_outPKc) refers to uicode.o(.data) for .data
+    uicode.o(i._Z7rotateXdPdS_) refers to cos.o(i.cos) for cos
+    uicode.o(i._Z7rotateXdPdS_) refers to sin.o(i.sin) for sin
+    uicode.o(i._Z7rotateXdPdS_) refers to uicode.o(i._Z8multiplyiiiPdS_S_) for multiply(int, int, int, double*, double*, double*)
+    uicode.o(i._Z7rotateXdPdS_) refers to uicode.o(.bss) for .bss
+    uicode.o(i._Z7rotateYdPdS_) refers to cos.o(i.cos) for cos
+    uicode.o(i._Z7rotateYdPdS_) refers to sin.o(i.sin) for sin
+    uicode.o(i._Z7rotateYdPdS_) refers to uicode.o(i._Z8multiplyiiiPdS_S_) for multiply(int, int, int, double*, double*, double*)
+    uicode.o(i._Z7rotateYdPdS_) refers to uicode.o(.bss) for .bss
+    uicode.o(i._Z7rotateZdPdS_) refers to cos.o(i.cos) for cos
+    uicode.o(i._Z7rotateZdPdS_) refers to sin.o(i.sin) for sin
+    uicode.o(i._Z7rotateZdPdS_) refers to uicode.o(i._Z8multiplyiiiPdS_S_) for multiply(int, int, int, double*, double*, double*)
+    uicode.o(i._Z7rotateZdPdS_) refers to uicode.o(.bss) for .bss
+    uicode.o(i._Z8get_timev) refers to memcpya.o(.text) for __aeabi_memcpy
+    uicode.o(i._Z8multiplyiiiPdS_S_) refers to dmul.o(.text) for __aeabi_dmul
+    uicode.o(i._Z8multiplyiiiPdS_S_) refers to dadd.o(.text) for __aeabi_dadd
+    uicode.o(i._Z9build_bmpPKcjjPh) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to cxa_guard_acquire.o(i.__cxa_guard_acquire) for __cxa_guard_acquire
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) for c_surface::c_surface(unsigned, unsigned, unsigned, Z_ORDER_LEVEL, c_rect)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN9c_displayC1EPviiP9c_surface) for c_display::c_display(void*, int, int, c_surface*)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN5ShapeC2Ev) for Shape::Shape__sub_object()
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to memseta.o(.text) for __aeabi_memclr4
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN4Cube4drawEiib) for Cube::draw(int, int, bool)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN4Cube6rotateEv) for Cube::rotate()
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN7Pyramid4drawEiib) for Pyramid::draw(int, int, bool)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._ZN7Pyramid6rotateEv) for Pyramid::rotate()
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(i._Z12thread_sleepj) for thread_sleep(unsigned)
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(.data) for .data
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(.bss) for .bss
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(.constdata__ZTV15c_surface_no_fb) for vtable for c_surface_no_fb
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(.constdata__ZTV4Cube) for vtable for Cube
+    uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) refers to uicode.o(.constdata__ZTV7Pyramid) for vtable for Pyramid
+    uicode.o(i._ZN6c_fifo4readEPvi) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_fifo5writeEPvi) refers to uicode.o(i._Z7log_outPKc) for log_out(const char*)
+    uicode.o(i._ZN6c_fifo5writeEPvi) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZNK10c_keyboard15get_msg_entriesEv) refers to uicode.o(.constdata) for .constdata
+    uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv) refers to uicode.o(.constdata) for .constdata
+    uicode.o(i._ZNK6c_edit15get_msg_entriesEv) refers to uicode.o(.constdata) for .constdata
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(i._ZN5c_wndC1Ev) for c_wnd::c_wnd()
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to aeabi_atexit.o(.text) for __aeabi_atexit
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(i._ZN17c_keyboard_buttonC1Ev) for c_keyboard_button::c_keyboard_button()
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(.bss) for .bss
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(.constdata__ZTV10c_keyboard) for vtable for c_keyboard
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(i._ZN10c_keyboardD1Ev) for c_keyboard::~c_keyboard()
+    uicode.o(i.__sti___10_UIcode_cpp_707dc85a) refers to uicode.o(i._ZN17c_keyboard_buttonD1Ev) for c_keyboard_button::~c_keyboard_button()
+    uicode.o(i.getUiOfHello3D) refers to uicode.o(.data) for .data
+    uicode.o(i.startHello3D) refers to uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) for create_ui(void*, int, int, int, EXTERNAL_GFX_OP*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z23register_debug_functionPFvPKciEPFvS0_E) for i._Z23register_debug_functionPFvPKciEPFvS0_E
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z7_assertPKci) for i._Z7_assertPKci
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z7log_outPKc) for i._Z7log_outPKc
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z18get_time_in_secondv) for i._Z18get_time_in_secondv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z13second_to_dayl) for i._Z13second_to_dayl
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z8get_timev) for i._Z8get_timev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z16start_real_timerPFvPvE) for i._Z16start_real_timerPFvPvE
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z14register_timeriPFvPvS_E) for i._Z14register_timeriPFvPvS_E
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z17get_cur_thread_idv) for i._Z17get_cur_thread_idv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z13create_threadPmPvPFS0_S0_ES0_) for i._Z13create_threadPmPvPFS0_S0_ES0_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z12thread_sleepj) for i._Z12thread_sleepj
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z9build_bmpPKcjjPh) for i._Z9build_bmpPKcjjPh
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z8multiplyiiiPdS_S_) for i._Z8multiplyiiiPdS_S_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z7rotateXdPdS_) for i._Z7rotateXdPdS_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z7rotateYdPdS_) for i._Z7rotateYdPdS_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z7rotateZdPdS_) for i._Z7rotateZdPdS_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z11projectOnXYPdS_d) for i._Z11projectOnXYPdS_d
+    uicode.o(.ARM.exidx) refers to uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP) for i._Z9create_uiPviiiP15EXTERNAL_GFX_OP
+    uicode.o(.ARM.exidx) refers to uicode.o(i.startHello3D) for i.startHello3D
+    uicode.o(.ARM.exidx) refers to uicode.o(i.getUiOfHello3D) for i.getUiOfHello3D
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_fifoC1Ev) for i._ZN6c_fifoC1Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_fifo4readEPvi) for i._ZN6c_fifo4readEPvi
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_fifo5writeEPvi) for i._ZN6c_fifo5writeEPvi
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv) for i._ZNK12c_cmd_target15get_msg_entriesEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK10c_keyboard15get_msg_entriesEv) for i._ZNK10c_keyboard15get_msg_entriesEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK6c_edit15get_msg_entriesEv) for i._ZNK6c_edit15get_msg_entriesEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i.__sti___10_UIcode_cpp_707dc85a) for i.__sti___10_UIcode_cpp_707dc85a
+    uicode.o(.constdata) refers to uicode.o(i._ZN10c_keyboard14on_key_clickedEii) for c_keyboard::on_key_clicked(int, int)
+    uicode.o(.constdata) refers to uicode.o(i._ZN6c_edit18on_key_board_clickEii) for c_edit::on_key_board_click(int, int)
+    uicode.o(.data) refers to uicode.o(.bss) for s_key_Q
+    uicode.o(.init_array) refers to uicode.o(i.__sti___10_UIcode_cpp_707dc85a) for __sti___10_UIcode_cpp_707dc85a
+    uicode.o(.init_array) refers to cpp_init.o(.text) for __cpp_initialize__aeabi_
+    delete.o(i._ZdlPv) refers to malloc.o(i.free) for free
+    delete.o(.ARM.exidx) refers to delete.o(i._ZdlPv) for i._ZdlPv
+    pure_virt.o(i.__cxa_pure_virtual) refers to cpp_signal.o(.text) for __rt_SIGPVFN
+    pure_virt.o(.ARM.exidx) refers to pure_virt.o(i.__cxa_pure_virtual) for i.__cxa_pure_virtual
+    cxa_guard_acquire.o(.ARM.exidx) refers to cxa_guard_acquire.o(i.__cxa_guard_acquire) for i.__cxa_guard_acquire
+    cxa_guard_release.o(.ARM.exidx) refers to cxa_guard_release.o(i.__cxa_guard_release) for i.__cxa_guard_release
+    lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD1Ev) for __cxxabiv1::__enum_type_info::~__enum_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD1Ev) for __cxxabiv1::__array_type_info::~__array_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD1Ev) for __cxxabiv1::__class_type_info::~__class_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD1Ev) for __cxxabiv1::__pbase_type_info::~__pbase_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD1Ev) for __cxxabiv1::__pointer_type_info::~__pointer_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD1Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD1Ev) for __cxxabiv1::__pbase_type_info::~__pbase_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD1Ev) for __cxxabiv1::__function_type_info::~__function_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD1Ev) for __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD1Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD1Ev) for __cxxabiv1::__class_type_info::~__class_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD1Ev) for __cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD1Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD1Ev) for __cxxabiv1::__class_type_info::~__class_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD1Ev) for __cxxabiv1::__fundamental_type_info::~__fundamental_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev) for __cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info()
+    lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD1Ev) for __cxxabiv1::__pbase_type_info::~__pbase_type_info()
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD1Ev) for i._ZN10__cxxabiv123__fundamental_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD0Ev) for i._ZN10__cxxabiv123__fundamental_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD1Ev) for i._ZN10__cxxabiv117__array_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD0Ev) for i._ZN10__cxxabiv117__array_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD1Ev) for i._ZN10__cxxabiv120__function_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD0Ev) for i._ZN10__cxxabiv120__function_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD1Ev) for i._ZN10__cxxabiv116__enum_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD0Ev) for i._ZN10__cxxabiv116__enum_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD1Ev) for i._ZN10__cxxabiv117__class_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD0Ev) for i._ZN10__cxxabiv117__class_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD1Ev) for i._ZN10__cxxabiv120__si_class_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD0Ev) for i._ZN10__cxxabiv120__si_class_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD1Ev) for i._ZN10__cxxabiv121__vmi_class_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD0Ev) for i._ZN10__cxxabiv121__vmi_class_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD1Ev) for i._ZN10__cxxabiv117__pbase_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD0Ev) for i._ZN10__cxxabiv117__pbase_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD1Ev) for i._ZN10__cxxabiv119__pointer_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD0Ev) for i._ZN10__cxxabiv119__pointer_type_infoD0Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev) for i._ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev) for i._ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev
+    aeabi_vec_ctor_nocookie_nodtor.o(.ARM.exidx) refers to aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor) for i.__aeabi_vec_ctor_nocookie_nodtor
+    aeabi_vec_ctor_nocookie_nodtor.o(.ARM.exidx) refers to unwind_pr0.o(.text) for __aeabi_unwind_cpp_pr0
+    cos.o(i.__softfp_cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos.o(i.__softfp_cos) refers to cos.o(i.cos) for cos
+    cos.o(i.cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos.o(i.cos) refers to errno.o(i.__set_errno) for __set_errno
+    cos.o(i.cos) refers to dunder.o(i.__mathlib_dbl_invalid) for __mathlib_dbl_invalid
+    cos.o(i.cos) refers to dunder.o(i.__mathlib_dbl_infnan) for __mathlib_dbl_infnan
+    cos.o(i.cos) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    cos.o(i.cos) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    cos.o(i.cos) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    cos_x.o(i.____softfp_cos$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_x.o(i.____softfp_cos$lsc) refers to cos_x.o(i.__cos$lsc) for __cos$lsc
+    cos_x.o(i.__cos$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_x.o(i.__cos$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    cos_x.o(i.__cos$lsc) refers to dunder.o(i.__mathlib_dbl_infnan) for __mathlib_dbl_infnan
+    cos_x.o(i.__cos$lsc) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    cos_x.o(i.__cos$lsc) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    cos_x.o(i.__cos$lsc) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    sin.o(i.__softfp_sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.__softfp_sin) refers to sin.o(i.sin) for sin
+    sin.o(i.sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin.o(i.sin) refers to errno.o(i.__set_errno) for __set_errno
+    sin.o(i.sin) refers to dunder.o(i.__mathlib_dbl_invalid) for __mathlib_dbl_invalid
+    sin.o(i.sin) refers to dunder.o(i.__mathlib_dbl_infnan) for __mathlib_dbl_infnan
+    sin.o(i.sin) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    sin.o(i.sin) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    sin.o(i.sin) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
+    sin_x.o(i.____softfp_sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_x.o(i.____softfp_sin$lsc) refers to sin_x.o(i.__sin$lsc) for __sin$lsc
+    sin_x.o(i.__sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_x.o(i.__sin$lsc) refers to errno.o(i.__set_errno) for __set_errno
+    sin_x.o(i.__sin$lsc) refers to dunder.o(i.__mathlib_dbl_infnan) for __mathlib_dbl_infnan
+    sin_x.o(i.__sin$lsc) refers to rred.o(i.__ieee754_rem_pio2) for __ieee754_rem_pio2
+    sin_x.o(i.__sin$lsc) refers to cos_i.o(i.__kernel_cos) for __kernel_cos
+    sin_x.o(i.__sin$lsc) refers to sin_i.o(i.__kernel_sin) for __kernel_sin
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -353,25 +516,585 @@ Section Cross References
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    calloc.o(.text) refers to malloc.o(i.malloc) for malloc
+    cpp_init.o(.emb_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.init_array) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.init_array) refers to cpp_init.o(.text) for __cpp_initialize__aeabi_
+    cpp_init.o(.dummy_text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    cpp_init.o(.text) refers (Special) to entry8a.o(.ARM.Collect$$$$00000009) for _main_cpp_init$empty
+    aeabi_atexit.o(.text) refers (Special) to cxa_finalize.o(.text) for __cxa_finalize
+    aeabi_atexit.o(.text) refers to malloc.o(i.malloc) for malloc
+    aeabi_atexit.o(.text) refers to cpp_dtor.o(.text) for __rt_ddtor_pointer_addr
+    dadd.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dadd.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    dadd.o(.text) refers to llsshr.o(.text) for __aeabi_lasr
+    dadd.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dmul.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dmul.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    ddiv.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    ddiv.o(.text) refers to depilogue.o(.text) for _double_round
+    dflti.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dflti.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    dfixi.o(.text) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dfixi.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    type_info_dtor.o(.ARM.exidx) refers to type_info_dtor.o(i._ZNSt9type_infoD1Ev) for i._ZNSt9type_infoD1Ev
+    type_info_dtor.o(.ARM.exidx) refers to type_info_dtor.o(i._ZNSt9type_infoD0Ev) for i._ZNSt9type_infoD0Ev
+    arm_exceptions_callterm.o(.text) refers to arm_exceptions_globs.o(.text) for __cxa_get_globals
+    arm_exceptions_callterm.o(.text) refers to arm_exceptions_support.o(.text) for __ARM::is_foreign_exception(_Unwind_Control_Block*)
+    arm_exceptions_callterm.o(.text) refers to arm_exceptions_terminate.o(.text) for std::terminate()
+    arm_exceptions_callterm.o(.ARM.exidx) refers to arm_exceptions_callterm.o(.text) for .text
+    unwind_pr0.o(.text) refers to unwind_prcommon.o(.text) for __ARM_unwind_cpp_prcommon
+    unwind_pr0.o(.ARM.exidx) refers to unwind_pr0.o(.text) for .text
+    cos_i.o(i.__kernel_cos) refers (Special) to iusefp.o(.text) for __I$use$fp
+    cos_i.o(i.__kernel_cos) refers to dfixi.o(.text) for __aeabi_d2iz
+    cos_i.o(i.__kernel_cos) refers to dmul.o(.text) for __aeabi_dmul
+    cos_i.o(i.__kernel_cos) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    cos_i.o(i.__kernel_cos) refers to dadd.o(.text) for __aeabi_dsub
+    cos_i.o(i.__kernel_cos) refers to dscalb.o(.text) for __ARM_scalbn
+    cos_i.o(i.__kernel_cos) refers to cos_i.o(.constdata) for .constdata
+    cos_i.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    dunder.o(i.__mathlib_dbl_divzero) refers to ddiv.o(.text) for __aeabi_ddiv
+    dunder.o(i.__mathlib_dbl_infnan) refers to dscalb.o(.text) for __ARM_scalbn
+    dunder.o(i.__mathlib_dbl_infnan2) refers to dadd.o(.text) for __aeabi_dadd
+    dunder.o(i.__mathlib_dbl_invalid) refers to ddiv.o(.text) for __aeabi_ddiv
+    dunder.o(i.__mathlib_dbl_overflow) refers to dscalb.o(.text) for __ARM_scalbn
+    dunder.o(i.__mathlib_dbl_posinfnan) refers to dmul.o(.text) for __aeabi_dmul
+    dunder.o(i.__mathlib_dbl_underflow) refers to dscalb.o(.text) for __ARM_scalbn
+    rred.o(i.__ieee754_rem_pio2) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rred.o(i.__ieee754_rem_pio2) refers to dadd.o(.text) for __aeabi_dsub
+    rred.o(i.__ieee754_rem_pio2) refers to dmul.o(.text) for __aeabi_dmul
+    rred.o(i.__ieee754_rem_pio2) refers to dfixi.o(.text) for __aeabi_d2iz
+    rred.o(i.__ieee754_rem_pio2) refers to dflti.o(.text) for __aeabi_i2d
+    rred.o(i.__ieee754_rem_pio2) refers to dfltui.o(.text) for __aeabi_ui2d
+    rred.o(i.__ieee754_rem_pio2) refers to dscalb.o(.text) for __ARM_scalbn
+    rred.o(i.__ieee754_rem_pio2) refers to rred.o(.constdata) for .constdata
+    rred.o(i.__use_accurate_range_reduction) refers (Special) to iusefp.o(.text) for __I$use$fp
+    rred.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i.o(i.__kernel_sin) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i.o(i.__kernel_sin) refers to fpclassify.o(i.__ARM_fpclassify) for __ARM_fpclassify
+    sin_i.o(i.__kernel_sin) refers to dunder.o(i.__mathlib_dbl_underflow) for __mathlib_dbl_underflow
+    sin_i.o(i.__kernel_sin) refers to dmul.o(.text) for __aeabi_dmul
+    sin_i.o(i.__kernel_sin) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    sin_i.o(i.__kernel_sin) refers to dscalb.o(.text) for __ARM_scalbn
+    sin_i.o(i.__kernel_sin) refers to dadd.o(.text) for __aeabi_dsub
+    sin_i.o(i.__kernel_sin) refers to sin_i.o(.constdata) for .constdata
+    sin_i.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i_x.o(i.____kernel_sin$lsc) refers (Special) to iusefp.o(.text) for __I$use$fp
+    sin_i_x.o(i.____kernel_sin$lsc) refers to dmul.o(.text) for __aeabi_dmul
+    sin_i_x.o(i.____kernel_sin$lsc) refers to poly.o(i.__kernel_poly) for __kernel_poly
+    sin_i_x.o(i.____kernel_sin$lsc) refers to dscalb.o(.text) for __ARM_scalbn
+    sin_i_x.o(i.____kernel_sin$lsc) refers to dadd.o(.text) for __aeabi_dsub
+    sin_i_x.o(i.____kernel_sin$lsc) refers to sin_i_x.o(.constdata) for .constdata
+    sin_i_x.o(.constdata) refers (Special) to iusefp.o(.text) for __I$use$fp
     entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
     entry2.o(.ARM.Collect$$$$00002712) refers to startup_stm32f103xe.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to startup_stm32f103xe.o(STACK) for __initial_sp
     entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
     entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry8a.o(.ARM.Collect$$$$00000009) refers (Weak) to cpp_init.o(.text) for __cpp_initialize__aeabi_
     entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(i.main) for main
     entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(i.main) for main
+    entry10b.o(.ARM.Collect$$$$0000000E) refers (Weak) to cxa_finalize.o(.text) for __cxa_finalize
+    malloc.o(i.free) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloc.o(i.malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloc.o(i.malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__free$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.__malloc$realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocr.o(i.__malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocr.o(i.__malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocr.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocr.o(i.realloc) refers to mallocr.o(i.__free$realloc) for __free$realloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.internal_alloc) for internal_alloc
+    mallocr.o(i.realloc) refers to mallocr.o(i.__malloc$realloc) for __malloc$realloc
+    mallocr.o(i.realloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    malloca.o(i.__aligned_malloc) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__aligned_malloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    malloca.o(i.__free$memalign) refers to mvars.o(.data) for __microlib_freelist
+    malloca.o(i.__malloc$memalign) refers to malloca.o(i.__aligned_malloc) for __aligned_malloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist_initialised
+    mallocra.o(i.__aligned_malloc$realloc) refers to startup_stm32f103xe.o(HEAP) for __heap_base
+    mallocra.o(i.__aligned_malloc$realloc) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__free$realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.__malloc$realloc$memalign) refers to mallocra.o(i.__aligned_malloc$realloc) for __aligned_malloc$realloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__free$realloc$memalign) for __free$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.internal_alloc) for internal_alloc
+    mallocra.o(i.__realloc$memalign) refers to mallocra.o(i.__malloc$realloc$memalign) for __malloc$realloc$memalign
+    mallocra.o(i.__realloc$memalign) refers to mvars.o(.data) for __microlib_freelist
+    mallocra.o(i.internal_alloc) refers to memcpya.o(.text) for __aeabi_memcpy
+    mallocra.o(i.internal_alloc) refers to mvars.o(.data) for __microlib_freelist
+    errno.o(i.__aeabi_errno_addr) refers to errno.o(.data) for .data
+    errno.o(i.__read_errno) refers to errno.o(.data) for .data
+    errno.o(i.__set_errno) refers to errno.o(.data) for .data
+    cpp_dtor.o(.text) refers to cpp_dtor.o(.data) for .data
+    cxa_finalize.o(.text) refers (Special) to cpp_final.o(.text) for __rt_lib_shutdown_cpp_2
+    cxa_finalize.o(.text) refers to cpp_dtor.o(.text) for __rt_ddtor_pointer_addr
+    cxa_finalize.o(.text) refers to malloc.o(i.free) for free
+    depilogue.o(.text) refers to llshl.o(.text) for __aeabi_llsl
+    depilogue.o(.text) refers to llushr.o(.text) for __aeabi_llsr
+    arm_begincatch_noexceptions.o(.ARM.exidx) refers to arm_begincatch_noexceptions.o(.text) for .text
+    arm_exceptions_terminate.o(.text) refers to arm_exceptions_globs.o(.text) for __cxa_get_globals
+    arm_exceptions_terminate.o(.ARM.exidx) refers to arm_exceptions_terminate.o(.text) for .text
+    arm_exceptions_support.o(.text) refers to arm_exceptions_support.o(.constdata) for .constdata
+    arm_exceptions_support.o(.ARM.exidx) refers to arm_exceptions_support.o(.text) for .text
+    arm_exceptions_globs.o(.text) refers to cpp_memory.o(.text) for __rt_eh_globals_addr
+    arm_exceptions_globs.o(.text) refers to malloc.o(i.malloc) for malloc
+    arm_exceptions_globs.o(.text) refers to arm_exceptions_mem.o(.text) for __ARM_exceptions_buffer_init
+    arm_exceptions_globs.o(.ARM.exidx) refers to arm_exceptions_globs.o(.text) for .text
+    unwind_prcommon.o(.text) refers to unwinder.o(.text) for _Unwind_VRS_Get
+    unwind_prcommon.o(.text) refers to unwind_activity.o(.emb_text) for _Unwind_Activity
+    unwind_prcommon.o(.ARM.exidx) refers to unwind_prcommon.o(.text) for .text
+    fpclassify.o(i.__ARM_fpclassify) refers (Special) to iusefp.o(.text) for __I$use$fp
+    poly.o(i.__kernel_poly) refers (Special) to iusefp.o(.text) for __I$use$fp
+    poly.o(i.__kernel_poly) refers to dmul.o(.text) for __aeabi_dmul
+    poly.o(i.__kernel_poly) refers to dadd.o(.text) for __aeabi_dadd
     init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+    cpp_final.o(.text) refers (Special) to entry10b.o(.ARM.Collect$$$$0000000E) for __rt_final_cpp$nonempty
+    dfltui.o(.text) refers to depilogue.o(.text) for _double_epilogue
+    arm_exceptions_mem.o(.text) refers to malloc.o(i.malloc) for malloc
+    arm_exceptions_mem.o(.ARM.exidx) refers to arm_exceptions_mem.o(.text) for .text
+    unwinder.o(.emb_text) refers to unwinder.o(.text) for __ARM_Unwind_RaiseException
+    unwinder.o(.text) refers to bsearch.o(.text) for bsearch
+    unwinder.o(.text) refers to unwind_activity.o(.emb_text) for _Unwind_Activity
+    unwinder.o(.text) refers to unwinder.o(.emb_text) for __ARM_Unwind_VRS_corerestore
+    unwinder.o(.text) refers to malloc.o(i.malloc) for malloc
+    unwinder.o(.text) refers to memcpya.o(.text) for __aeabi_memcpy4
+    unwinder.o(.text) refers to malloc.o(i.free) for free
+    unwinder.o(.text) refers (Weak) to unwind_pr0.o(.text) for __aeabi_unwind_cpp_pr0
+    unwinder.o(.ARM.exidx) refers to unwinder.o(.text) for .text
+    cpp_memory.o(.text) refers to cpp_memory.o(.data) for .data
+    uicode.o(.constdata__ZTV12c_cmd_target) refers to uicode.o(.constdata__ZTI12c_cmd_target) for typeinfo for c_cmd_target
+    uicode.o(.constdata__ZTV12c_cmd_target) refers to uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv) for c_cmd_target::get_msg_entries() const
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(.constdata__ZTI10c_keyboard) for typeinfo for c_keyboard
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZNK10c_keyboard15get_msg_entriesEv) for c_keyboard::get_msg_entries() const
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN10c_keyboardD1Ev) for c_keyboard::~c_keyboard()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN10c_keyboardD0Ev) for c_keyboard::~c_keyboard__deallocating()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd16on_init_childrenEv) for c_wnd::on_init_children()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN10c_keyboard8on_paintEv) for c_keyboard::on_paint()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for c_wnd::show_window()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) for c_wnd::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) for c_wnd::on_navigate(NAVIGATION_KEY)
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN10c_keyboard14pre_create_wndEv) for c_keyboard::pre_create_wnd()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd8on_focusEv) for c_wnd::on_focus()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN5c_wnd13on_kill_focusEv) for c_wnd::on_kill_focus()
+    uicode.o(.constdata__ZTV10c_keyboard) refers to uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) for c_keyboard::connect(c_wnd*, unsigned short, KEYBOARD_STYLE)
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(.constdata__ZTI6c_edit) for typeinfo for c_edit
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZNK6c_edit15get_msg_entriesEv) for c_edit::get_msg_entries() const
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_editD1Ev) for c_edit::~c_edit()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_editD0Ev) for c_edit::~c_edit__deallocating()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN5c_wnd16on_init_childrenEv) for c_wnd::on_init_children()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit8on_paintEv) for c_edit::on_paint()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for c_wnd::show_window()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION) for c_edit::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit11on_navigateE14NAVIGATION_KEY) for c_edit::on_navigate(NAVIGATION_KEY)
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit14pre_create_wndEv) for c_edit::pre_create_wnd()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit8on_focusEv) for c_edit::on_focus()
+    uicode.o(.constdata__ZTV6c_edit) refers to uicode.o(i._ZN6c_edit13on_kill_focusEv) for c_edit::on_kill_focus()
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface9draw_lineEiiiijj) for i._ZN9c_surface9draw_lineEiiiijj
+    uicode.o(i._ZN7Pyramid4drawEiib) refers to dflti.o(.text) for __aeabi_i2d
+    uicode.o(i._ZN7Pyramid4drawEiib) refers to dadd.o(.text) for __aeabi_dadd
+    uicode.o(i._ZN7Pyramid4drawEiib) refers to dfixi.o(.text) for __aeabi_d2iz
+    uicode.o(i._ZN7Pyramid4drawEiib) refers to uicode.o(i._ZN9c_surface9draw_lineEiiiijj) for c_surface::draw_line(int, int, int, int, unsigned, unsigned)
+    uicode.o(i._ZN7Pyramid4drawEiib) refers to uicode.o(.data) for .data
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN7Pyramid4drawEiib) for i._ZN7Pyramid4drawEiib
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to uicode.o(i._Z7rotateYdPdS_) for rotateY(double, double*, double*)
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to uicode.o(i._Z7rotateXdPdS_) for rotateX(double, double*, double*)
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to dadd.o(.text) for __aeabi_dsub
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to ddiv.o(.text) for __aeabi_ddiv
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to uicode.o(i._Z11projectOnXYPdS_d) for projectOnXY(double*, double*, double)
+    uicode.o(i._ZN7Pyramid6rotateEv) refers to uicode.o(.data) for .data
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN7Pyramid6rotateEv) for i._ZN7Pyramid6rotateEv
+    uicode.o(i._ZN4Cube4drawEiib) refers to dflti.o(.text) for __aeabi_i2d
+    uicode.o(i._ZN4Cube4drawEiib) refers to dadd.o(.text) for __aeabi_dadd
+    uicode.o(i._ZN4Cube4drawEiib) refers to dfixi.o(.text) for __aeabi_d2iz
+    uicode.o(i._ZN4Cube4drawEiib) refers to uicode.o(i._ZN9c_surface9draw_lineEiiiijj) for c_surface::draw_line(int, int, int, int, unsigned, unsigned)
+    uicode.o(i._ZN4Cube4drawEiib) refers to uicode.o(.data) for .data
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN4Cube4drawEiib) for i._ZN4Cube4drawEiib
+    uicode.o(i._ZN4Cube6rotateEv) refers to uicode.o(i._Z7rotateXdPdS_) for rotateX(double, double*, double*)
+    uicode.o(i._ZN4Cube6rotateEv) refers to uicode.o(i._Z7rotateYdPdS_) for rotateY(double, double*, double*)
+    uicode.o(i._ZN4Cube6rotateEv) refers to uicode.o(i._Z7rotateZdPdS_) for rotateZ(double, double*, double*)
+    uicode.o(i._ZN4Cube6rotateEv) refers to uicode.o(i._Z11projectOnXYPdS_d) for projectOnXY(double*, double*, double)
+    uicode.o(i._ZN4Cube6rotateEv) refers to dadd.o(.text) for __aeabi_dadd
+    uicode.o(i._ZN4Cube6rotateEv) refers to uicode.o(.data) for .data
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN4Cube6rotateEv) for i._ZN4Cube6rotateEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_displayC1EPviiP9c_surface) for i._ZN9c_displayC1EPviiP9c_surface
+    uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect) refers to calloc.o(.text) for calloc
+    uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect) refers to uicode.o(.constdata__ZZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rectEs) for c_surface::set_surface(Z_ORDER_LEVEL, c_rect)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect) for i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to aeabi_vec_ctor_nocookie_nodtor.o(i.__aeabi_vec_ctor_nocookie_nodtor) for __aeabi_vec_ctor_nocookie_nodtor
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to uicode.o(i._ZN6c_rect8set_rectEiiii) for c_rect::set_rect(int, int, int, int)
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect) for c_surface::set_surface(Z_ORDER_LEVEL, c_rect)
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to uicode.o(.constdata__ZTV9c_surface) for vtable for c_surface
+    uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) refers to uicode.o(i._ZN7c_layerC1Ev) for c_layer::c_layer()
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect) for i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect
+    uicode.o(i._ZN9c_surface9draw_rectEiiiijjj) refers to uicode.o(i._ZN9c_surface10draw_hlineEiiijj) for c_surface::draw_hline(int, int, int, unsigned, unsigned)
+    uicode.o(i._ZN9c_surface9draw_rectEiiiijjj) refers to uicode.o(i._ZN9c_surface10draw_vlineEiiijj) for c_surface::draw_vline(int, int, int, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface9draw_rectEiiiijjj) for i._ZN9c_surface9draw_rectEiiiijjj
+    uicode.o(i._ZN9c_surface10show_layerER6c_rectj) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN9c_surface10show_layerER6c_rectj) refers to uicode.o(.constdata__ZZN9c_surface10show_layerER6c_rectjEs) for c_surface::show_layer(c_rect&, unsigned)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface10show_layerER6c_rectj) for i._ZN9c_surface10show_layerER6c_rectj
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word11get_latticeEPK16struct_font_infoj) for i._ZN6c_word11get_latticeEPK16struct_font_infoj
+    uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) refers to uicode.o(.data__ZZN6c_word13get_utf8_codeEPKcRjE19s_utf8_length_table) for c_word::get_utf8_code(const char*, unsigned&)::s_utf8_length_table
+    uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) refers to uicode.o(.constdata__ZZN6c_word13get_utf8_codeEPKcRjEs) for c_word::get_utf8_code(const char*, unsigned&)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) for i._ZN6c_word13get_utf8_codeEPKcRj
+    uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) refers to uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) for c_word::get_string_pos(const char*, const struct_font_info*, c_rect, unsigned, int&, int&)
+    uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) refers to uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) for c_word::get_utf8_code(const char*, unsigned&)
+    uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) refers to uicode.o(i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj) for c_word::draw_single_char(c_surface*, int, unsigned, int, int, const struct_font_info*, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) for i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj
+    uicode.o(i._ZN5c_wndC1Ev) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN5c_wndC1Ev) refers to uicode.o(.constdata__ZTV5c_wnd) for vtable for c_wnd
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wndC1Ev) for i._ZN5c_wndC1Ev
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(i._ZNK5c_wnd14get_last_childEv) for c_wnd::get_last_child() const
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) for c_cmd_target::load_cmd_msg()
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(.constdata__ZZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_treeEs) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)::string
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(.constdata__ZZN5c_wnd16add_child_2_tailEPS_Es) for c_wnd::add_child_2_tail(c_wnd*)::string
+    uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) refers to uicode.o(.constdata__ZZN5c_wnd14load_child_wndEP15struct_wnd_treeEs) for c_wnd::load_child_wnd(struct_wnd_tree*)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd10disconnectEv) for i._ZN5c_wnd10disconnectEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for i._ZN5c_wnd11show_windowEv
+    uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) refers to uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect) for c_wnd::get_wnd_rect(c_rect&) const
+    uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) refers to uicode.o(i._ZN6c_rect8set_rectEiiii) for c_rect::set_rect(int, int, int, int)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) for i._ZNK5c_wnd15get_screen_rectER6c_rect
+    uicode.o(i._ZN5c_wnd15set_child_focusEPS_) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN5c_wnd15set_child_focusEPS_) refers to uicode.o(i._ZNK5c_wnd12is_focus_wndEv) for c_wnd::is_focus_wnd() const
+    uicode.o(i._ZN5c_wnd15set_child_focusEPS_) refers to uicode.o(.constdata__ZZN5c_wnd15set_child_focusEPS_Es) for c_wnd::set_child_focus(c_wnd*)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd15set_child_focusEPS_) for i._ZN5c_wnd15set_child_focusEPS_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd13notify_parentEii) for i._ZN5c_wnd13notify_parentEii
+    uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZNK5c_wnd12is_focus_wndEv) for c_wnd::is_focus_wnd() const
+    uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect) for c_wnd::get_wnd_rect(c_rect&) const
+    uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for c_rect::pt_in_rect(int, int) const
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) for i._ZN5c_wnd8on_touchEii12TOUCH_ACTION
+    uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) refers to uicode.o(i._ZNK5c_wnd12is_focus_wndEv) for c_wnd::is_focus_wnd() const
+    uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) refers to uicode.o(i._ZN5c_wnd15set_child_focusEPS_) for c_wnd::set_child_focus(c_wnd*)
+    uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) refers to uicode.o(i._ZNK5c_wnd14get_last_childEv) for c_wnd::get_last_child() const
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) for i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect) for c_wnd::get_wnd_rect(c_rect&) const
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(.constdata__ZZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLEEs) for c_keyboard::connect(c_wnd*, unsigned short, KEYBOARD_STYLE)::string
+    uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) refers to uicode.o(.data) for .data
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) for i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboardD1Ev) for i._ZN10c_keyboardD1Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_editD1Ev) for i._ZN6c_editD1Ev
+    uicode.o(i._ZN5ShapeC2Ev) refers to uicode.o(.constdata__ZTV5Shape) for vtable for Shape
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5ShapeC2Ev) for i._ZN5ShapeC2Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_rectC1Ev) for i._ZN6c_rectC1Ev
+    uicode.o(i._ZN6c_rect8set_rectEiiii) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_rect8set_rectEiiii) refers to uicode.o(.constdata__ZZN6c_rect8set_rectEiiiiEs) for c_rect::set_rect(int, int, int, int)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_rect8set_rectEiiii) for i._ZN6c_rect8set_rectEiiii
+    uicode.o(i._ZN7c_layerC1Ev) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN7c_layerC1Ev) for i._ZN7c_layerC1Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for i._ZNK6c_rect10pt_in_rectEii
+    uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) refers to memcpya.o(.text) for __aeabi_memcpy4
+    uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) refers to uicode.o(.bss) for .bss
+    uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) refers to uicode.o(.data) for .data
+    uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) refers to uicode.o(.constdata__ZZN12c_cmd_target12load_cmd_msgEvEs) for c_cmd_target::load_cmd_msg()::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv) for i._ZN12c_cmd_target12load_cmd_msgEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface10draw_hlineEiiijj) for i._ZN9c_surface10draw_hlineEiiijj
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface10draw_vlineEiiijj) for i._ZN9c_surface10draw_vlineEiiijj
+    uicode.o(i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj) refers to uicode.o(i._ZN6c_word11get_latticeEPK16struct_font_infoj) for c_word::get_lattice(const struct_font_info*, unsigned)
+    uicode.o(i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj) refers to uicode.o(i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj) for c_word::draw_lattice(c_surface*, int, int, int, int, int, const unsigned char*, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj) for i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj
+    uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) refers to uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj) for c_word::get_utf8_code(const char*, unsigned&)
+    uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) refers to uicode.o(i._ZN6c_word11get_latticeEPK16struct_font_infoj) for c_word::get_lattice(const struct_font_info*, unsigned)
+    uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) refers to uicode.o(.constdata__ZZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_Es) for c_word::get_string_pos(const char*, const struct_font_info*, c_rect, unsigned, int&, int&)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_) for i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK5c_wnd14get_last_childEv) for i._ZNK5c_wnd14get_last_childEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd16on_init_childrenEv) for i._ZN5c_wnd16on_init_childrenEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK5c_wnd12is_focus_wndEv) for i._ZNK5c_wnd12is_focus_wndEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect) for i._ZNK5c_wnd12get_wnd_rectER6c_rect
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd8on_focusEv) for i._ZN5c_wnd8on_focusEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd13on_kill_focusEv) for i._ZN5c_wnd13on_kill_focusEv
+    uicode.o(i._ZN10c_keyboard14pre_create_wndEv) refers to memseta.o(.text) for __aeabi_memclr4
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboard14pre_create_wndEv) for i._ZN10c_keyboard14pre_create_wndEv
+    uicode.o(i._ZN10c_keyboard8on_paintEv) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN10c_keyboard8on_paintEv) refers to uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) for c_wnd::get_screen_rect(c_rect&) const
+    uicode.o(i._ZN10c_keyboard8on_paintEv) refers to uicode.o(i._ZN9c_surface9fill_rectE6c_rectjj) for c_surface::fill_rect(c_rect, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboard8on_paintEv) for i._ZN10c_keyboard8on_paintEv
+    uicode.o(i._ZN10c_keyboard14on_key_clickedEii) refers to memseta.o(.text) for __aeabi_memclr4
+    uicode.o(i._ZN10c_keyboard14on_key_clickedEii) refers to uicode.o(i._ZN5c_wnd13notify_parentEii) for c_wnd::notify_parent(int, int)
+    uicode.o(i._ZN10c_keyboard14on_key_clickedEii) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN10c_keyboard14on_key_clickedEii) refers to uicode.o(.constdata__ZZN10c_keyboard15on_char_clickedEiiEs) for c_keyboard::on_char_clicked(int, int)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboard14on_key_clickedEii) for i._ZN10c_keyboard14on_key_clickedEii
+    uicode.o(i._ZN10c_keyboardD0Ev) refers to delete.o(i._ZdlPv) for operator delete (void*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN10c_keyboardD0Ev) for i._ZN10c_keyboardD0Ev
+    uicode.o(i._ZN17c_keyboard_buttonC1Ev) refers to uicode.o(i._ZN5c_wndC1Ev) for c_wnd::c_wnd()
+    uicode.o(i._ZN17c_keyboard_buttonC1Ev) refers to uicode.o(.constdata__ZTV17c_keyboard_button) for vtable for c_keyboard_button
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN17c_keyboard_buttonC1Ev) for i._ZN17c_keyboard_buttonC1Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN17c_keyboard_buttonD1Ev) for i._ZN17c_keyboard_buttonD1Ev
+    uicode.o(i._ZN6c_edit14pre_create_wndEv) refers to uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) for c_theme::get_font(FONT_TYPE)
+    uicode.o(i._ZN6c_edit14pre_create_wndEv) refers to uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) for c_theme::get_color(COLOR_TYPE)
+    uicode.o(i._ZN6c_edit14pre_create_wndEv) refers to memseta.o(.text) for __aeabi_memclr
+    uicode.o(i._ZN6c_edit14pre_create_wndEv) refers to strlen.o(.text) for strlen
+    uicode.o(i._ZN6c_edit14pre_create_wndEv) refers to strcpy.o(.text) for strcpy
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit14pre_create_wndEv) for i._ZN6c_edit14pre_create_wndEv
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) for c_wnd::get_screen_rect(c_rect&) const
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN5c_wnd10disconnectEv) for c_wnd::disconnect()
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN9c_surface10show_layerER6c_rectj) for c_surface::show_layer(c_rect&, unsigned)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) for c_theme::get_color(COLOR_TYPE)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN9c_surface9fill_rectE6c_rectjj) for c_surface::fill_rect(c_rect, unsigned, unsigned)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) for c_word::draw_string_in_rect(c_surface*, int, const char*, c_rect, const struct_font_info*, unsigned, unsigned, unsigned)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE) for c_keyboard::connect(c_wnd*, unsigned short, KEYBOARD_STYLE)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for c_wnd::show_window()
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(i._ZN9c_surface9draw_rectEiiiijjj) for c_surface::draw_rect(int, int, int, int, unsigned, unsigned, unsigned)
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to strlen.o(.text) for strlen
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(.bss) for .bss
+    uicode.o(i._ZN6c_edit8on_paintEv) refers to uicode.o(.constdata__ZZN6c_edit8on_paintEvEs) for c_edit::on_paint()::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit8on_paintEv) for i._ZN6c_edit8on_paintEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit8on_focusEv) for i._ZN6c_edit8on_focusEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit13on_kill_focusEv) for i._ZN6c_edit13on_kill_focusEv
+    uicode.o(i._ZN6c_edit11on_navigateE14NAVIGATION_KEY) refers to uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) for c_wnd::on_navigate(NAVIGATION_KEY)
+    uicode.o(i._ZN6c_edit11on_navigateE14NAVIGATION_KEY) refers to uicode.o(.bss) for .bss
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit11on_navigateE14NAVIGATION_KEY) for i._ZN6c_edit11on_navigateE14NAVIGATION_KEY
+    uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for c_rect::pt_in_rect(int, int) const
+    uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZN6c_edit13on_touch_downEii) for c_edit::on_touch_down(int, int)
+    uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) for c_wnd::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION) for i._ZN6c_edit8on_touchEii12TOUCH_ACTION
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to strcpy.o(.text) for strcpy
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to strlen.o(.text) for strlen
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to memcpya.o(.text) for __aeabi_memcpy
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to memseta.o(.text) for __aeabi_memclr
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to uicode.o(.constdata__ZZN6c_edit18on_key_board_clickEiiEs) for c_edit::on_key_board_click(int, int)::string
+    uicode.o(i._ZN6c_edit18on_key_board_clickEii) refers to uicode.o(.bss) for .bss
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit18on_key_board_clickEii) for i._ZN6c_edit18on_key_board_clickEii
+    uicode.o(i._ZN6c_editD0Ev) refers to delete.o(i._ZdlPv) for operator delete (void*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_editD0Ev) for i._ZN6c_editD0Ev
+    uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) refers to uicode.o(.constdata__ZZN7c_theme8get_fontE9FONT_TYPEEs) for c_theme::get_font(FONT_TYPE)::string
+    uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) refers to uicode.o(.bss) for .bss
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) for i._ZN7c_theme8get_fontE9FONT_TYPE
+    uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) refers to uicode.o(.constdata__ZZN7c_theme9get_colorE10COLOR_TYPEEs) for c_theme::get_color(COLOR_TYPE)::string
+    uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) refers to uicode.o(.bss) for .bss
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) for i._ZN7c_theme9get_colorE10COLOR_TYPE
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface9fill_rectE6c_rectjj) for i._ZN9c_surface9fill_rectE6c_rectjj
+    uicode.o(i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj) refers to uicode.o(.constdata__ZZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjjEs) for c_word::draw_lattice(c_surface*, int, int, int, int, int, const unsigned char*, unsigned, unsigned)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj) for i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect) for c_wnd::get_wnd_rect(c_rect&) const
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for c_rect::pt_in_rect(int, int) const
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(i._ZN5c_wnd15set_child_focusEPS_) for c_wnd::set_child_focus(c_wnd*)
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) for c_wnd::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(i._ZN6c_edit13on_touch_downEii) refers to uicode.o(.bss) for .bss
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN6c_edit13on_touch_downEii) for i._ZN6c_edit13on_touch_downEii
+    uicode.o(.constdata__ZTI12c_cmd_target) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    uicode.o(.constdata__ZTI12c_cmd_target) refers to uicode.o(.constdata__ZTS12c_cmd_target) for typeinfo name for c_cmd_target
+    uicode.o(.constdata__ZTV9c_surface) refers to uicode.o(.constdata__ZTI9c_surface) for typeinfo for c_surface
+    uicode.o(.constdata__ZTV9c_surface) refers to uicode.o(i._ZN9c_surface10draw_pixelEiijj) for c_surface::draw_pixel(int, int, unsigned, unsigned)
+    uicode.o(.constdata__ZTV9c_surface) refers to uicode.o(i._ZN9c_surface9fill_rectEiiiijj) for c_surface::fill_rect(int, int, int, int, unsigned, unsigned)
+    uicode.o(.constdata__ZTV9c_surface) refers to uicode.o(i._ZN9c_surface15fill_rect_on_fbEiiiij) for c_surface::fill_rect_on_fb(int, int, int, int, unsigned)
+    uicode.o(.constdata__ZTV9c_surface) refers to uicode.o(i._ZN9c_surface16draw_pixel_on_fbEiij) for c_surface::draw_pixel_on_fb(int, int, unsigned)
+    uicode.o(.constdata__ZTV15c_surface_no_fb) refers to uicode.o(.constdata__ZTI15c_surface_no_fb) for typeinfo for c_surface_no_fb
+    uicode.o(.constdata__ZTV15c_surface_no_fb) refers to uicode.o(i._ZN9c_surface10draw_pixelEiijj) for c_surface::draw_pixel(int, int, unsigned, unsigned)
+    uicode.o(.constdata__ZTV15c_surface_no_fb) refers to uicode.o(i._ZN9c_surface9fill_rectEiiiijj) for c_surface::fill_rect(int, int, int, int, unsigned, unsigned)
+    uicode.o(.constdata__ZTV15c_surface_no_fb) refers to uicode.o(i._ZN15c_surface_no_fb15fill_rect_on_fbEiiiij) for c_surface_no_fb::fill_rect_on_fb(int, int, int, int, unsigned)
+    uicode.o(.constdata__ZTV15c_surface_no_fb) refers to uicode.o(i._ZN15c_surface_no_fb16draw_pixel_on_fbEiij) for c_surface_no_fb::draw_pixel_on_fb(int, int, unsigned)
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(.constdata__ZTI5c_wnd) for typeinfo for c_wnd
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv) for c_cmd_target::get_msg_entries() const
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wndD1Ev) for c_wnd::~c_wnd()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wndD0Ev) for c_wnd::~c_wnd__deallocating()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd16on_init_childrenEv) for c_wnd::on_init_children()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd8on_paintEv) for c_wnd::on_paint()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for c_wnd::show_window()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION) for c_wnd::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) for c_wnd::on_navigate(NAVIGATION_KEY)
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd14pre_create_wndEv) for c_wnd::pre_create_wnd()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd8on_focusEv) for c_wnd::on_focus()
+    uicode.o(.constdata__ZTV5c_wnd) refers to uicode.o(i._ZN5c_wnd13on_kill_focusEv) for c_wnd::on_kill_focus()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(.constdata__ZTI17c_keyboard_button) for typeinfo for c_keyboard_button
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv) for c_cmd_target::get_msg_entries() const
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN17c_keyboard_buttonD1Ev) for c_keyboard_button::~c_keyboard_button()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN17c_keyboard_buttonD0Ev) for c_keyboard_button::~c_keyboard_button__deallocating()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree) for c_wnd::connect(c_wnd*, unsigned short, const char*, short, short, short, short, struct_wnd_tree*)
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN5c_wnd16on_init_childrenEv) for c_wnd::on_init_children()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN17c_keyboard_button8on_paintEv) for c_keyboard_button::on_paint()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN5c_wnd11show_windowEv) for c_wnd::show_window()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN8c_button8on_touchEii12TOUCH_ACTION) for c_button::on_touch(int, int, TOUCH_ACTION)
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN8c_button11on_navigateE14NAVIGATION_KEY) for c_button::on_navigate(NAVIGATION_KEY)
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN8c_button14pre_create_wndEv) for c_button::pre_create_wnd()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN8c_button8on_focusEv) for c_button::on_focus()
+    uicode.o(.constdata__ZTV17c_keyboard_button) refers to uicode.o(i._ZN8c_button13on_kill_focusEv) for c_button::on_kill_focus()
+    uicode.o(.constdata__ZTI6c_edit) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI6c_edit) refers to uicode.o(.constdata__ZTS6c_edit) for typeinfo name for c_edit
+    uicode.o(.constdata__ZTI6c_edit) refers to uicode.o(.constdata__ZTI5c_wnd) for typeinfo for c_wnd
+    uicode.o(.constdata__ZTV5Shape) refers to uicode.o(.constdata__ZTI5Shape) for typeinfo for Shape
+    uicode.o(.constdata__ZTV5Shape) refers to pure_virt.o(i.__cxa_pure_virtual) for __cxa_pure_virtual
+    uicode.o(.constdata__ZTV4Cube) refers to uicode.o(.constdata__ZTI4Cube) for typeinfo for Cube
+    uicode.o(.constdata__ZTV4Cube) refers to uicode.o(i._ZN4Cube4drawEiib) for Cube::draw(int, int, bool)
+    uicode.o(.constdata__ZTV4Cube) refers to uicode.o(i._ZN4Cube6rotateEv) for Cube::rotate()
+    uicode.o(.constdata__ZTV7Pyramid) refers to uicode.o(.constdata__ZTI7Pyramid) for typeinfo for Pyramid
+    uicode.o(.constdata__ZTV7Pyramid) refers to uicode.o(i._ZN7Pyramid4drawEiib) for Pyramid::draw(int, int, bool)
+    uicode.o(.constdata__ZTV7Pyramid) refers to uicode.o(i._ZN7Pyramid6rotateEv) for Pyramid::rotate()
+    uicode.o(.constdata__ZTI10c_keyboard) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI10c_keyboard) refers to uicode.o(.constdata__ZTS10c_keyboard) for typeinfo name for c_keyboard
+    uicode.o(.constdata__ZTI10c_keyboard) refers to uicode.o(.constdata__ZTI5c_wnd) for typeinfo for c_wnd
+    uicode.o(.constdata__ZTI9c_surface) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    uicode.o(.constdata__ZTI9c_surface) refers to uicode.o(.constdata__ZTS9c_surface) for typeinfo name for c_surface
+    uicode.o(.constdata__ZTI5c_wnd) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI5c_wnd) refers to uicode.o(.constdata__ZTS5c_wnd) for typeinfo name for c_wnd
+    uicode.o(.constdata__ZTI5c_wnd) refers to uicode.o(.constdata__ZTI12c_cmd_target) for typeinfo for c_cmd_target
+    uicode.o(.constdata__ZTI15c_surface_no_fb) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI15c_surface_no_fb) refers to uicode.o(.constdata__ZTS15c_surface_no_fb) for typeinfo name for c_surface_no_fb
+    uicode.o(.constdata__ZTI15c_surface_no_fb) refers to uicode.o(.constdata__ZTI9c_surface) for typeinfo for c_surface
+    uicode.o(.constdata__ZTI17c_keyboard_button) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI17c_keyboard_button) refers to uicode.o(.constdata__ZTS17c_keyboard_button) for typeinfo name for c_keyboard_button
+    uicode.o(.constdata__ZTI17c_keyboard_button) refers to uicode.o(.constdata__ZTI8c_button) for typeinfo for c_button
+    uicode.o(.constdata__ZTI5Shape) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    uicode.o(.constdata__ZTI5Shape) refers to uicode.o(.constdata__ZTS5Shape) for typeinfo name for Shape
+    uicode.o(.constdata__ZTI4Cube) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI4Cube) refers to uicode.o(.constdata__ZTS4Cube) for typeinfo name for Cube
+    uicode.o(.constdata__ZTI4Cube) refers to uicode.o(.constdata__ZTI5Shape) for typeinfo for Shape
+    uicode.o(.constdata__ZTI7Pyramid) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI7Pyramid) refers to uicode.o(.constdata__ZTS7Pyramid) for typeinfo name for Pyramid
+    uicode.o(.constdata__ZTI7Pyramid) refers to uicode.o(.constdata__ZTI5Shape) for typeinfo for Shape
+    uicode.o(.constdata__ZTI8c_button) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    uicode.o(.constdata__ZTI8c_button) refers to uicode.o(.constdata__ZTS8c_button) for typeinfo name for c_button
+    uicode.o(.constdata__ZTI8c_button) refers to uicode.o(.constdata__ZTI5c_wnd) for typeinfo for c_wnd
+    uicode.o(i._ZN9c_surface10draw_pixelEiijj) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN9c_surface10draw_pixelEiijj) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for c_rect::pt_in_rect(int, int) const
+    uicode.o(i._ZN9c_surface10draw_pixelEiijj) refers to uicode.o(.constdata__ZZN9c_surface10draw_pixelEiijjEs) for c_surface::draw_pixel(int, int, unsigned, unsigned)::string
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface10draw_pixelEiijj) for i._ZN9c_surface10draw_pixelEiijj
+    uicode.o(i._ZN9c_surface9fill_rectEiiiijj) refers to uicode.o(i._ZNK6c_rect10pt_in_rectEii) for c_rect::pt_in_rect(int, int) const
+    uicode.o(i._ZN9c_surface9fill_rectEiiiijj) refers to uicode.o(i._ZN9c_surface10draw_hlineEiiijj) for c_surface::draw_hline(int, int, int, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface9fill_rectEiiiijj) for i._ZN9c_surface9fill_rectEiiiijj
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface15fill_rect_on_fbEiiiij) for i._ZN9c_surface15fill_rect_on_fbEiiiij
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface16draw_pixel_on_fbEiij) for i._ZN9c_surface16draw_pixel_on_fbEiij
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN15c_surface_no_fb15fill_rect_on_fbEiiiij) for i._ZN15c_surface_no_fb15fill_rect_on_fbEiiiij
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN15c_surface_no_fb16draw_pixel_on_fbEiij) for i._ZN15c_surface_no_fb16draw_pixel_on_fbEiij
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wndD1Ev) for i._ZN5c_wndD1Ev
+    uicode.o(i._ZN5c_wndD0Ev) refers to delete.o(i._ZdlPv) for operator delete (void*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wndD0Ev) for i._ZN5c_wndD0Ev
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd8on_paintEv) for i._ZN5c_wnd8on_paintEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN5c_wnd14pre_create_wndEv) for i._ZN5c_wnd14pre_create_wndEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN8c_button8on_focusEv) for i._ZN8c_button8on_focusEv
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN8c_button13on_kill_focusEv) for i._ZN8c_button13on_kill_focusEv
+    uicode.o(i._ZN8c_button14pre_create_wndEv) refers to uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE) for c_theme::get_font(FONT_TYPE)
+    uicode.o(i._ZN8c_button14pre_create_wndEv) refers to uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) for c_theme::get_color(COLOR_TYPE)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN8c_button14pre_create_wndEv) for i._ZN8c_button14pre_create_wndEv
+    uicode.o(i._ZN8c_button8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZN5c_wnd13notify_parentEii) for c_wnd::notify_parent(int, int)
+    uicode.o(i._ZN8c_button8on_touchEii12TOUCH_ACTION) refers to uicode.o(i._ZN5c_wnd15set_child_focusEPS_) for c_wnd::set_child_focus(c_wnd*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN8c_button8on_touchEii12TOUCH_ACTION) for i._ZN8c_button8on_touchEii12TOUCH_ACTION
+    uicode.o(i._ZN8c_button11on_navigateE14NAVIGATION_KEY) refers to uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY) for c_wnd::on_navigate(NAVIGATION_KEY)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN8c_button11on_navigateE14NAVIGATION_KEY) for i._ZN8c_button11on_navigateE14NAVIGATION_KEY
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZN6c_rectC1Ev) for c_rect::c_rect()
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect) for c_wnd::get_screen_rect(c_rect&) const
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._Z7_assertPKci) for _assert(const char*, int)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE) for c_theme::get_color(COLOR_TYPE)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZN9c_surface9fill_rectE6c_rectjj) for c_surface::fill_rect(c_rect, unsigned, unsigned)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZN9c_surface9draw_rectE6c_rectjjj) for c_surface::draw_rect(c_rect, unsigned, unsigned, unsigned)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj) for c_word::draw_string_in_rect(c_surface*, int, const char*, c_rect, const struct_font_info*, unsigned, unsigned, unsigned)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs) for c_keyboard_button::on_paint()::string
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_0) for c_keyboard_button::on_paint()::string (instance 2)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_1) for c_keyboard_button::on_paint()::string (instance 3)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_2) for c_keyboard_button::on_paint()::string (instance 4)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_3) for c_keyboard_button::on_paint()::string (instance 5)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_4) for c_keyboard_button::on_paint()::string (instance 6)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_5) for c_keyboard_button::on_paint()::string (instance 7)
+    uicode.o(i._ZN17c_keyboard_button8on_paintEv) refers to uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_6) for c_keyboard_button::on_paint()::string (instance 8)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN17c_keyboard_button8on_paintEv) for i._ZN17c_keyboard_button8on_paintEv
+    uicode.o(i._ZN17c_keyboard_buttonD0Ev) refers to delete.o(i._ZdlPv) for operator delete (void*)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN17c_keyboard_buttonD0Ev) for i._ZN17c_keyboard_buttonD0Ev
+    uicode.o(i._ZN9c_surface9draw_rectE6c_rectjjj) refers to uicode.o(i._ZN9c_surface9draw_rectEiiiijjj) for c_surface::draw_rect(int, int, int, int, unsigned, unsigned, unsigned)
+    uicode.o(.ARM.exidx) refers to uicode.o(i._ZN9c_surface9draw_rectE6c_rectjjj) for i._ZN9c_surface9draw_rectE6c_rectjjj
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv123__fundamental_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv123__fundamental_type_infoE) for typeinfo for __cxxabiv1::__fundamental_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv123__fundamental_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD1Ev) for __cxxabiv1::__fundamental_type_info::~__fundamental_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv123__fundamental_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv123__fundamental_type_infoD0Ev) for __cxxabiv1::__fundamental_type_info::~__fundamental_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__array_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__array_type_infoE) for typeinfo for __cxxabiv1::__array_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__array_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD1Ev) for __cxxabiv1::__array_type_info::~__array_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__array_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__array_type_infoD0Ev) for __cxxabiv1::__array_type_info::~__array_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__function_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__function_type_infoE) for typeinfo for __cxxabiv1::__function_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__function_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD1Ev) for __cxxabiv1::__function_type_info::~__function_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__function_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__function_type_infoD0Ev) for __cxxabiv1::__function_type_info::~__function_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv116__enum_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv116__enum_type_infoE) for typeinfo for __cxxabiv1::__enum_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv116__enum_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD1Ev) for __cxxabiv1::__enum_type_info::~__enum_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv116__enum_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv116__enum_type_infoD0Ev) for __cxxabiv1::__enum_type_info::~__enum_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) for typeinfo for __cxxabiv1::__class_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD1Ev) for __cxxabiv1::__class_type_info::~__class_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__class_type_infoD0Ev) for __cxxabiv1::__class_type_info::~__class_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__si_class_type_infoE) for typeinfo for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD1Ev) for __cxxabiv1::__si_class_type_info::~__si_class_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv120__si_class_type_infoD0Ev) for __cxxabiv1::__si_class_type_info::~__si_class_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv121__vmi_class_type_infoE) for typeinfo for __cxxabiv1::__vmi_class_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD1Ev) for __cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv121__vmi_class_type_infoD0Ev) for __cxxabiv1::__vmi_class_type_info::~__vmi_class_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__pbase_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) for typeinfo for __cxxabiv1::__pbase_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__pbase_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD1Ev) for __cxxabiv1::__pbase_type_info::~__pbase_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__pbase_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv117__pbase_type_infoD0Ev) for __cxxabiv1::__pbase_type_info::~__pbase_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv119__pointer_type_infoE) for typeinfo for __cxxabiv1::__pointer_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD1Ev) for __cxxabiv1::__pointer_type_info::~__pointer_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv119__pointer_type_infoD0Ev) for __cxxabiv1::__pointer_type_info::~__pointer_type_info__deallocating()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv129__pointer_to_member_type_infoE) for typeinfo for __cxxabiv1::__pointer_to_member_type_info
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD1Ev) for __cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info()
+    lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(i._ZN10__cxxabiv129__pointer_to_member_type_infoD0Ev) for __cxxabiv1::__pointer_to_member_type_info::~__pointer_to_member_type_info__deallocating()
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i._ZNSt9type_infodlEPv) for i._ZNSt9type_infodlEPv
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv123__fundamental_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv123__fundamental_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv123__fundamental_type_infoE) for typeinfo name for __cxxabiv1::__fundamental_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv123__fundamental_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__array_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__array_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv117__array_type_infoE) for typeinfo name for __cxxabiv1::__array_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__array_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__function_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__function_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv120__function_type_infoE) for typeinfo name for __cxxabiv1::__function_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__function_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv116__enum_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv116__enum_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv116__enum_type_infoE) for typeinfo name for __cxxabiv1::__enum_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv116__enum_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv117__class_type_infoE) for typeinfo name for __cxxabiv1::__class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv120__si_class_type_infoE) for typeinfo name for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv120__si_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) for typeinfo for __cxxabiv1::__class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv121__vmi_class_type_infoE) for typeinfo name for __cxxabiv1::__vmi_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv121__vmi_class_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__class_type_infoE) for typeinfo for __cxxabiv1::__class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv117__pbase_type_infoE) for typeinfo name for __cxxabiv1::__pbase_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv119__pointer_type_infoE) for typeinfo name for __cxxabiv1::__pointer_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv119__pointer_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) for typeinfo for __cxxabiv1::__pbase_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv120__si_class_type_infoE) for vtable for __cxxabiv1::__si_class_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTSN10__cxxabiv129__pointer_to_member_type_infoE) for typeinfo name for __cxxabiv1::__pointer_to_member_type_info
+    lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv129__pointer_to_member_type_infoE) refers to lib_rtti_impl.o(.constdata__ZTIN10__cxxabiv117__pbase_type_infoE) for typeinfo for __cxxabiv1::__pbase_type_info
+    lib_rtti_impl.o(i.__ARM_common_noexcept_landing) refers to arm_exceptions_callterm.o(.text) for __cxa_call_terminate
+    lib_rtti_impl.o(.ARM.exidx) refers to lib_rtti_impl.o(i.__ARM_common_noexcept_landing) for i.__ARM_common_noexcept_landing
+    type_info_dtor.o(.constdata__ZTVSt9type_info) refers to type_info_dtor.o(.constdata__ZTISt9type_info) for typeinfo for std::type_info
+    type_info_dtor.o(.constdata__ZTVSt9type_info) refers to type_info_dtor.o(i._ZNSt9type_infoD1Ev) for std::type_info::~type_info()
+    type_info_dtor.o(.constdata__ZTVSt9type_info) refers to type_info_dtor.o(i._ZNSt9type_infoD0Ev) for std::type_info::~type_info__deallocating()
+    type_info_dtor.o(.constdata__ZTISt9type_info) refers to lib_rtti_impl.o(.constdata__ZTVN10__cxxabiv117__class_type_infoE) for vtable for __cxxabiv1::__class_type_info
+    type_info_dtor.o(.constdata__ZTISt9type_info) refers to type_info_dtor.o(.constdata__ZTSSt9type_info) for typeinfo name for std::type_info
 
 
 ==============================================================================
 
 Removing Unused input sections from the image.
 
-    Removing startup_stm32f103xe.o(HEAP), (512 bytes).
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
     Removing main.o(i.Error_Handler), (2 bytes).
+    Removing main.o(i.delay_ms), (6 bytes).
     Removing stm32f1xx_it.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_it.o(.revsh_text), (4 bytes).
     Removing stm32f1xx_it.o(.rrx_text), (6 bytes).
@@ -380,11 +1103,21 @@ Removing Unused input sections from the image.
     Removing stm32f1xx_hal_msp.o(.rrx_text), (6 bytes).
     Removing stm32f1xx_hal_msp.o(i.HAL_SPI_MspDeInit), (40 bytes).
     Removing stm32f1xx_hal_msp.o(i.HAL_UART_MspDeInit), (40 bytes).
+    Removing fonts.o(.constdata), (1900 bytes).
+    Removing fonts.o(.constdata), (3420 bytes).
+    Removing fonts.o(.constdata), (4940 bytes).
+    Removing fonts.o(.data), (8 bytes).
+    Removing fonts.o(.data), (8 bytes).
+    Removing fonts.o(.data), (8 bytes).
     Removing st7735.o(.rev16_text), (4 bytes).
     Removing st7735.o(.revsh_text), (4 bytes).
     Removing st7735.o(.rrx_text), (6 bytes).
     Removing st7735.o(i.ST7735_DrawImage), (88 bytes).
+    Removing st7735.o(i.ST7735_FillRectangle), (152 bytes).
+    Removing st7735.o(i.ST7735_FillScreen), (18 bytes).
     Removing st7735.o(i.ST7735_InvertColors), (28 bytes).
+    Removing st7735.o(i.ST7735_WriteChar), (144 bytes).
+    Removing st7735.o(i.ST7735_WriteString), (94 bytes).
     Removing stm32f1xx_hal_gpio_ex.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_hal_gpio_ex.o(.revsh_text), (4 bytes).
     Removing stm32f1xx_hal_gpio_ex.o(.rrx_text), (6 bytes).
@@ -655,519 +1388,279 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.revsh_text), (4 bytes).
     Removing system_stm32f1xx.o(.rrx_text), (6 bytes).
     Removing system_stm32f1xx.o(i.SystemCoreClockUpdate), (104 bytes).
+    Removing uicode.o(i._Z11projectOnXYPdS_d), (36 bytes).
+    Removing uicode.o(i._Z12thread_sleepj), (6 bytes).
+    Removing uicode.o(i._Z13create_threadPmPvPFS0_S0_ES0_), (24 bytes).
+    Removing uicode.o(i._Z13second_to_dayl), (22 bytes).
+    Removing uicode.o(i._Z14register_timeriPFvPvS_E), (24 bytes).
+    Removing uicode.o(i._Z16start_real_timerPFvPvE), (24 bytes).
+    Removing uicode.o(i._Z17get_cur_thread_idv), (28 bytes).
+    Removing uicode.o(i._Z18get_time_in_secondv), (4 bytes).
+    Removing uicode.o(i._Z23register_debug_functionPFvPKciEPFvS0_E), (12 bytes).
+    Removing uicode.o(i._Z7_assertPKci), (16 bytes).
+    Removing uicode.o(i._Z7log_outPKc), (16 bytes).
+    Removing uicode.o(i._Z7rotateXdPdS_), (104 bytes).
+    Removing uicode.o(i._Z7rotateYdPdS_), (100 bytes).
+    Removing uicode.o(i._Z7rotateZdPdS_), (100 bytes).
+    Removing uicode.o(i._Z8get_timev), (22 bytes).
+    Removing uicode.o(i._Z8multiplyiiiPdS_S_), (108 bytes).
+    Removing uicode.o(i._Z9build_bmpPKcjjPh), (28 bytes).
+    Removing uicode.o(i._Z9create_uiPviiiP15EXTERNAL_GFX_OP), (412 bytes).
+    Removing uicode.o(i._ZN6c_fifo4readEPvi), (92 bytes).
+    Removing uicode.o(i._ZN6c_fifo5writeEPvi), (148 bytes).
+    Removing uicode.o(i._ZN6c_fifoC1Ev), (20 bytes).
+    Removing uicode.o(i._ZNK10c_keyboard15get_msg_entriesEv), (8 bytes).
+    Removing uicode.o(i._ZNK12c_cmd_target15get_msg_entriesEv), (8 bytes).
+    Removing uicode.o(i._ZNK6c_edit15get_msg_entriesEv), (8 bytes).
+    Removing uicode.o(i.getUiOfHello3D), (44 bytes).
+    Removing uicode.o(i.startHello3D), (10 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.bss), (24 bytes).
+    Removing uicode.o(.bss), (48 bytes).
+    Removing uicode.o(.constdata), (100 bytes).
+    Removing uicode.o(.data), (1528 bytes).
+    Removing dadd.o(.text), (334 bytes).
+    Removing dmul.o(.text), (228 bytes).
+    Removing ddiv.o(.text), (222 bytes).
+    Removing dflti.o(.text), (34 bytes).
+    Removing dfixi.o(.text), (62 bytes).
+    Removing depilogue.o(.text), (186 bytes).
+    Removing dscalb.o(.text), (46 bytes).
+    Removing dfltui.o(.text), (26 bytes).
+    Removing uicode.o(.constdata__ZZN6c_rect8set_rectEiiiiEs), (20 bytes).
+    Removing uicode.o(.constdata__ZTV12c_cmd_target), (12 bytes).
+    Removing uicode.o(.constdata__ZZN12c_cmd_target12load_cmd_msgEvEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN7c_theme8get_fontE9FONT_TYPEEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN7c_theme9get_colorE10COLOR_TYPEEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN9c_surface10draw_pixelEiijjEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN9c_surface10show_layerER6c_rectjEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN9c_surface14attach_displayEP9c_displayEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rectEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjjEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_Es), (20 bytes).
+    Removing uicode.o(.constdata__ZZN6c_word13get_utf8_codeEPKcRjEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_treeEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN5c_wnd15set_child_focusEPS_Es), (20 bytes).
+    Removing uicode.o(.constdata__ZZN5c_wnd16add_child_2_tailEPS_Es), (20 bytes).
+    Removing uicode.o(.constdata__ZZN5c_wnd14load_child_wndEP15struct_wnd_treeEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN8c_button8on_paintEvEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLEEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN10c_keyboard15on_char_clickedEiiEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_0), (5 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_1), (4 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_2), (6 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_3), (6 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_4), (2 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_5), (5 bytes).
+    Removing uicode.o(.constdata__ZZN17c_keyboard_button8on_paintEvEs_6), (5 bytes).
+    Removing uicode.o(.constdata__ZTV6c_edit), (56 bytes).
+    Removing uicode.o(.constdata__ZZN6c_edit8on_paintEvEs), (20 bytes).
+    Removing uicode.o(.constdata__ZZN6c_edit18on_key_board_clickEiiEs), (20 bytes).
+    Removing uicode.o(i._ZN9c_surface9draw_lineEiiiijj), (202 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN7Pyramid4drawEiib), (856 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN7Pyramid6rotateEv), (148 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN4Cube4drawEiib), (392 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN4Cube6rotateEv), (112 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_displayC1EPviiP9c_surface), (46 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface11set_surfaceE13Z_ORDER_LEVEL6c_rect), (116 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surfaceC1Ejjj13Z_ORDER_LEVEL6c_rect), (156 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface9draw_rectEiiiijjj), (114 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface10show_layerER6c_rectj), (180 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word11get_latticeEPK16struct_font_infoj), (70 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word13get_utf8_codeEPKcRj), (84 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word19draw_string_in_rectEP9c_surfaceiPKc6c_rectPK16struct_font_infojjj), (126 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd7connectEPS_tPKcssssP15struct_wnd_tree), (252 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd10disconnectEv), (92 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd11show_windowEv), (38 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZNK5c_wnd15get_screen_rectER6c_rect), (76 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd15set_child_focusEPS_), (72 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd13notify_parentEii), (86 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd8on_touchEii12TOUCH_ACTION), (122 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd11on_navigateE14NAVIGATION_KEY), (180 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN10c_keyboard7connectEP5c_wndt14KEYBOARD_STYLE), (156 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_editD1Ev), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5ShapeC2Ev), (24 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_rect8set_rectEiiii), (44 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN7c_layerC1Ev), (16 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZNK6c_rect10pt_in_rectEii), (32 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN12c_cmd_target12load_cmd_msgEv), (160 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface10draw_hlineEiiijj), (46 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface10draw_vlineEiiijj), (46 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word16draw_single_charEP9c_surfaceijiiPK16struct_font_infojj), (184 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word14get_string_posEPKcPK16struct_font_info6c_rectjRiS6_), (208 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZNK5c_wnd14get_last_childEv), (18 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd16on_init_childrenEv), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZNK5c_wnd12is_focus_wndEv), (18 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZNK5c_wnd12get_wnd_rectER6c_rect), (12 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd8on_focusEv), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd13on_kill_focusEv), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN10c_keyboard14pre_create_wndEv), (30 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN10c_keyboard8on_paintEv), (52 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN10c_keyboard14on_key_clickedEii), (180 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN10c_keyboardD0Ev), (4 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit14pre_create_wndEv), (84 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit8on_paintEv), (416 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit8on_focusEv), (10 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit13on_kill_focusEv), (10 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit11on_navigateE14NAVIGATION_KEY), (80 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit8on_touchEii12TOUCH_ACTION), (76 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit18on_key_board_clickEii), (92 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_editD0Ev), (4 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN7c_theme8get_fontE9FONT_TYPE), (32 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN7c_theme9get_colorE10COLOR_TYPE), (32 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface9fill_rectE6c_rectjj), (20 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_word12draw_latticeEP9c_surfaceiiiiiPKhjj), (284 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN6c_edit13on_touch_downEii), (136 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(.constdata__ZTI12c_cmd_target), (8 bytes).
+    Removing uicode.o(.constdata__ZTV9c_surface), (24 bytes).
+    Removing uicode.o(.constdata__ZTV15c_surface_no_fb), (24 bytes).
+    Removing uicode.o(.constdata__ZTI6c_edit), (12 bytes).
+    Removing uicode.o(.constdata__ZTV5Shape), (16 bytes).
+    Removing uicode.o(.constdata__ZTV4Cube), (16 bytes).
+    Removing uicode.o(.constdata__ZTV7Pyramid), (16 bytes).
+    Removing uicode.o(.constdata__ZTI10c_keyboard), (12 bytes).
+    Removing uicode.o(.data__ZZN6c_word13get_utf8_codeEPKcRjE19s_utf8_length_table), (256 bytes).
+    Removing uicode.o(.constdata__ZTI9c_surface), (8 bytes).
+    Removing uicode.o(.constdata__ZTI5c_wnd), (12 bytes).
+    Removing uicode.o(.constdata__ZTI15c_surface_no_fb), (12 bytes).
+    Removing uicode.o(.constdata__ZTI17c_keyboard_button), (12 bytes).
+    Removing uicode.o(.constdata__ZTI5Shape), (8 bytes).
+    Removing uicode.o(.constdata__ZTI4Cube), (12 bytes).
+    Removing uicode.o(.constdata__ZTI7Pyramid), (12 bytes).
+    Removing uicode.o(.constdata__ZTS12c_cmd_target), (15 bytes).
+    Removing uicode.o(.constdata__ZTS10c_keyboard), (13 bytes).
+    Removing uicode.o(.constdata__ZTS6c_edit), (8 bytes).
+    Removing uicode.o(.constdata__ZTI8c_button), (12 bytes).
+    Removing uicode.o(.constdata__ZTS9c_surface), (11 bytes).
+    Removing uicode.o(.constdata__ZTS15c_surface_no_fb), (18 bytes).
+    Removing uicode.o(.constdata__ZTS5c_wnd), (7 bytes).
+    Removing uicode.o(.constdata__ZTS17c_keyboard_button), (20 bytes).
+    Removing uicode.o(.constdata__ZTS5Shape), (7 bytes).
+    Removing uicode.o(.constdata__ZTS4Cube), (6 bytes).
+    Removing uicode.o(.constdata__ZTS7Pyramid), (9 bytes).
+    Removing uicode.o(.constdata__ZTS8c_button), (10 bytes).
+    Removing uicode.o(i._ZN9c_surface10draw_pixelEiijj), (240 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface9fill_rectEiiiijj), (260 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface15fill_rect_on_fbEiiiij), (214 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface16draw_pixel_on_fbEiij), (106 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN15c_surface_no_fb15fill_rect_on_fbEiiiij), (210 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN15c_surface_no_fb16draw_pixel_on_fbEiij), (100 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wndD1Ev), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wndD0Ev), (4 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd8on_paintEv), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN5c_wnd14pre_create_wndEv), (2 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN8c_button8on_focusEv), (10 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN8c_button13on_kill_focusEv), (10 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN8c_button14pre_create_wndEv), (28 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN8c_button8on_touchEii12TOUCH_ACTION), (58 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN8c_button11on_navigateE14NAVIGATION_KEY), (56 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN17c_keyboard_button8on_paintEv), (528 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN17c_keyboard_buttonD0Ev), (4 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
+    Removing uicode.o(i._ZN9c_surface9draw_rectE6c_rectjjj), (26 bytes).
+    Removing uicode.o(.ARM.exidx), (8 bytes).
 
-288 unused section(s) (total 16474 bytes) removed from the image.
-
-==============================================================================
-
-Image Symbol Table
-
-    Local Symbols
-
-    Symbol Name                              Value     Ov Type        Size  Object(Section)
-
-    ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
-    ../Src/stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
-    ../Src/stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
-    ../Src/system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/string/memset.c         0x00000000   Number         0  memseta.o ABSOLUTE
-    ..\Inc\fonts.c                           0x00000000   Number         0  fonts.o ABSOLUTE
-    ..\Inc\st7735.c                          0x00000000   Number         0  st7735.o ABSOLUTE
-    ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
-    ..\Src\stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
-    ..\Src\stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
-    ..\Src\system_stm32f1xx.c                0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
-    ..\\Inc\\st7735.c                        0x00000000   Number         0  st7735.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c 0x00000000   Number         0  stm32f1xx_hal_exti.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
-    C:/Users/Lizn/STM32Cube/Repository/STM32Cube_FW_F1_V1.8.0/Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_uart.c 0x00000000   Number         0  stm32f1xx_hal_uart.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_exti.c 0x00000000   Number         0  stm32f1xx_hal_exti.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash.c 0x00000000   Number         0  stm32f1xx_hal_flash.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_flash_ex.c 0x00000000   Number         0  stm32f1xx_hal_flash_ex.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio.c 0x00000000   Number         0  stm32f1xx_hal_gpio.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_gpio_ex.c 0x00000000   Number         0  stm32f1xx_hal_gpio_ex.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_pwr.c 0x00000000   Number         0  stm32f1xx_hal_pwr.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc.c 0x00000000   Number         0  stm32f1xx_hal_rcc.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_rcc_ex.c 0x00000000   Number         0  stm32f1xx_hal_rcc_ex.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_spi.c 0x00000000   Number         0  stm32f1xx_hal_spi.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim.c 0x00000000   Number         0  stm32f1xx_hal_tim.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_tim_ex.c 0x00000000   Number         0  stm32f1xx_hal_tim_ex.o ABSOLUTE
-    C:\Users\Lizn\STM32Cube\Repository\STM32Cube_FW_F1_V1.8.0\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_uart.c 0x00000000   Number         0  stm32f1xx_hal_uart.o ABSOLUTE
-    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
-    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
-    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
-    startup_stm32f103xe.s                    0x00000000   Number         0  startup_stm32f103xe.o ABSOLUTE
-    RESET                                    0x08000000   Section      304  startup_stm32f103xe.o(RESET)
-    .ARM.Collect$$$$00000000                 0x08000130   Section        0  entry.o(.ARM.Collect$$$$00000000)
-    .ARM.Collect$$$$00000001                 0x08000130   Section        4  entry2.o(.ARM.Collect$$$$00000001)
-    .ARM.Collect$$$$00000004                 0x08000134   Section        4  entry5.o(.ARM.Collect$$$$00000004)
-    .ARM.Collect$$$$00000008                 0x08000138   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
-    .ARM.Collect$$$$0000000A                 0x08000138   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
-    .ARM.Collect$$$$0000000B                 0x08000138   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
-    .ARM.Collect$$$$0000000D                 0x08000140   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
-    .ARM.Collect$$$$0000000F                 0x08000140   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
-    .ARM.Collect$$$$00002712                 0x08000140   Section        4  entry2.o(.ARM.Collect$$$$00002712)
-    __lit__00000000                          0x08000140   Data           4  entry2.o(.ARM.Collect$$$$00002712)
-    .text                                    0x08000144   Section       36  startup_stm32f103xe.o(.text)
-    .text                                    0x08000168   Section        0  memseta.o(.text)
-    .text                                    0x0800018c   Section       36  init.o(.text)
-    i.BusFault_Handler                       0x080001b0   Section        0  stm32f1xx_it.o(i.BusFault_Handler)
-    i.DebugMon_Handler                       0x080001b2   Section        0  stm32f1xx_it.o(i.DebugMon_Handler)
-    i.HAL_Delay                              0x080001b4   Section        0  stm32f1xx_hal.o(i.HAL_Delay)
-    i.HAL_GPIO_Init                          0x080001d8   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
-    i.HAL_GPIO_WritePin                      0x080003d0   Section        0  stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin)
-    i.HAL_GetTick                            0x080003dc   Section        0  stm32f1xx_hal.o(i.HAL_GetTick)
-    i.HAL_IncTick                            0x080003e8   Section        0  stm32f1xx_hal.o(i.HAL_IncTick)
-    i.HAL_Init                               0x080003f8   Section        0  stm32f1xx_hal.o(i.HAL_Init)
-    i.HAL_InitTick                           0x0800041c   Section        0  stm32f1xx_hal.o(i.HAL_InitTick)
-    i.HAL_MspInit                            0x0800045c   Section        0  stm32f1xx_hal_msp.o(i.HAL_MspInit)
-    i.HAL_NVIC_SetPriority                   0x08000498   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    i.HAL_NVIC_SetPriorityGrouping           0x080004d8   Section        0  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    i.HAL_RCC_ClockConfig                    0x080004fc   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    i.HAL_RCC_GetPCLK1Freq                   0x08000628   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    i.HAL_RCC_GetPCLK2Freq                   0x08000648   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
-    i.HAL_RCC_GetSysClockFreq                0x08000668   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    i.HAL_RCC_OscConfig                      0x080006d4   Section        0  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    i.HAL_SPI_Init                           0x080009f4   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_Init)
-    i.HAL_SPI_MspInit                        0x08000a70   Section        0  stm32f1xx_hal_msp.o(i.HAL_SPI_MspInit)
-    i.HAL_SPI_Transmit                       0x08000acc   Section        0  stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit)
-    i.HAL_SYSTICK_Config                     0x08000c28   Section        0  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    i.HAL_UART_Init                          0x08000c50   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Init)
-    i.HAL_UART_MspInit                       0x08000cb4   Section        0  stm32f1xx_hal_msp.o(i.HAL_UART_MspInit)
-    i.HAL_UART_Transmit                      0x08000d24   Section        0  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
-    i.HardFault_Handler                      0x08000dde   Section        0  stm32f1xx_it.o(i.HardFault_Handler)
-    i.MX_GPIO_Init                           0x08000de0   Section        0  main.o(i.MX_GPIO_Init)
-    MX_GPIO_Init                             0x08000de1   Thumb Code   138  main.o(i.MX_GPIO_Init)
-    i.MX_SPI1_Init                           0x08000e78   Section        0  main.o(i.MX_SPI1_Init)
-    MX_SPI1_Init                             0x08000e79   Thumb Code    48  main.o(i.MX_SPI1_Init)
-    i.MemManage_Handler                      0x08000eb0   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
-    i.NMI_Handler                            0x08000eb2   Section        0  stm32f1xx_it.o(i.NMI_Handler)
-    i.PendSV_Handler                         0x08000eb4   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
-    i.SPI_EndRxTxTransaction                 0x08000eb6   Section        0  stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction)
-    SPI_EndRxTxTransaction                   0x08000eb7   Thumb Code    32  stm32f1xx_hal_spi.o(i.SPI_EndRxTxTransaction)
-    i.SPI_WaitFlagStateUntilTimeout          0x08000ed6   Section        0  stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
-    SPI_WaitFlagStateUntilTimeout            0x08000ed7   Thumb Code   148  stm32f1xx_hal_spi.o(i.SPI_WaitFlagStateUntilTimeout)
-    i.ST7735_DrawPixel                       0x08000f6a   Section        0  st7735.o(i.ST7735_DrawPixel)
-    i.ST7735_ExecuteCommandList              0x08000fa6   Section        0  st7735.o(i.ST7735_ExecuteCommandList)
-    ST7735_ExecuteCommandList                0x08000fa7   Thumb Code    70  st7735.o(i.ST7735_ExecuteCommandList)
-    i.ST7735_FillRectangle                   0x08000fec   Section        0  st7735.o(i.ST7735_FillRectangle)
-    i.ST7735_FillScreen                      0x08001084   Section        0  st7735.o(i.ST7735_FillScreen)
-    i.ST7735_Init                            0x08001098   Section        0  st7735.o(i.ST7735_Init)
-    i.ST7735_Select                          0x080010e0   Section        0  st7735.o(i.ST7735_Select)
-    ST7735_Select                            0x080010e1   Thumb Code    10  st7735.o(i.ST7735_Select)
-    i.ST7735_SetAddressWindow                0x080010f0   Section        0  st7735.o(i.ST7735_SetAddressWindow)
-    ST7735_SetAddressWindow                  0x080010f1   Thumb Code    74  st7735.o(i.ST7735_SetAddressWindow)
-    i.ST7735_Unselect                        0x0800113c   Section        0  st7735.o(i.ST7735_Unselect)
-    i.ST7735_WriteChar                       0x0800114c   Section        0  st7735.o(i.ST7735_WriteChar)
-    ST7735_WriteChar                         0x0800114d   Thumb Code   144  st7735.o(i.ST7735_WriteChar)
-    i.ST7735_WriteCommand                    0x080011dc   Section        0  st7735.o(i.ST7735_WriteCommand)
-    ST7735_WriteCommand                      0x080011dd   Thumb Code    28  st7735.o(i.ST7735_WriteCommand)
-    i.ST7735_WriteData                       0x08001200   Section        0  st7735.o(i.ST7735_WriteData)
-    ST7735_WriteData                         0x08001201   Thumb Code    34  st7735.o(i.ST7735_WriteData)
-    i.ST7735_WriteString                     0x0800122c   Section        0  st7735.o(i.ST7735_WriteString)
-    i.SVC_Handler                            0x0800128a   Section        0  stm32f1xx_it.o(i.SVC_Handler)
-    i.SysTick_Handler                        0x0800128c   Section        0  stm32f1xx_it.o(i.SysTick_Handler)
-    i.SystemClock_Config                     0x08001290   Section        0  main.o(i.SystemClock_Config)
-    i.SystemInit                             0x080012d4   Section        0  system_stm32f1xx.o(i.SystemInit)
-    i.UART_SetConfig                         0x0800131c   Section        0  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    UART_SetConfig                           0x0800131d   Thumb Code   178  stm32f1xx_hal_uart.o(i.UART_SetConfig)
-    i.UART_WaitOnFlagUntilTimeout            0x080013d4   Section        0  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    UART_WaitOnFlagUntilTimeout              0x080013d5   Thumb Code   100  stm32f1xx_hal_uart.o(i.UART_WaitOnFlagUntilTimeout)
-    i.UsageFault_Handler                     0x08001438   Section        0  stm32f1xx_it.o(i.UsageFault_Handler)
-    i.__NVIC_SetPriority                     0x0800143a   Section        0  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
-    __NVIC_SetPriority                       0x0800143b   Thumb Code    32  stm32f1xx_hal_cortex.o(i.__NVIC_SetPriority)
-    i.__scatterload_copy                     0x0800145a   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x08001468   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x0800146a   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.init                                   0x08001478   Section        0  main.o(i.init)
-    i.loop                                   0x080014a8   Section        0  main.o(i.loop)
-    i.main                                   0x08001710   Section        0  main.o(i.main)
-    .constdata                               0x08001754   Section     1900  fonts.o(.constdata)
-    Font7x10                                 0x08001754   Data        1900  fonts.o(.constdata)
-    .constdata                               0x08001ec0   Section     3420  fonts.o(.constdata)
-    Font11x18                                0x08001ec0   Data        3420  fonts.o(.constdata)
-    .constdata                               0x08002c1c   Section     4940  fonts.o(.constdata)
-    Font16x26                                0x08002c1c   Data        4940  fonts.o(.constdata)
-    .constdata                               0x08003f68   Section      117  st7735.o(.constdata)
-    init_cmds1                               0x08003f68   Data          59  st7735.o(.constdata)
-    init_cmds2                               0x08003fa3   Data          15  st7735.o(.constdata)
-    init_cmds3                               0x08003fb2   Data          43  st7735.o(.constdata)
-    .constdata                               0x08003fdd   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08003fed   Section        8  system_stm32f1xx.o(.constdata)
-    .data                                    0x20000000   Section        8  fonts.o(.data)
-    .data                                    0x20000008   Section        8  fonts.o(.data)
-    .data                                    0x20000010   Section        8  fonts.o(.data)
-    .data                                    0x20000018   Section       12  stm32f1xx_hal.o(.data)
-    .data                                    0x20000024   Section        4  system_stm32f1xx.o(.data)
-    .bss                                     0x20000028   Section      152  main.o(.bss)
-    STACK                                    0x200000c0   Section     1024  startup_stm32f103xe.o(STACK)
-
-    Global Symbols
-
-    Symbol Name                              Value     Ov Type        Size  Object(Section)
-
-    BuildAttributes$$THM_ISAv4$P$D$K$B$S$PE$A:L22UL41UL21$X:L11$S22US41US21$IEEE1$IW$USESV6$~STKCKD$USESV7$~SHL$OSPACE$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
-    __ARM_use_no_argv                        0x00000000   Number         0  main.o ABSOLUTE
-    __cpp_initialize__aeabi_                  - Undefined Weak Reference
-    __cxa_finalize                            - Undefined Weak Reference
-    __decompress                              - Undefined Weak Reference
-    _clock_init                               - Undefined Weak Reference
-    _microlib_exit                            - Undefined Weak Reference
-    __Vectors_Size                           0x00000130   Number         0  startup_stm32f103xe.o ABSOLUTE
-    __Vectors                                0x08000000   Data           4  startup_stm32f103xe.o(RESET)
-    __Vectors_End                            0x08000130   Data           0  startup_stm32f103xe.o(RESET)
-    __main                                   0x08000131   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
-    _main_stk                                0x08000131   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
-    _main_scatterload                        0x08000135   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
-    __main_after_scatterload                 0x08000139   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
-    _main_clock                              0x08000139   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
-    _main_cpp_init                           0x08000139   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
-    _main_init                               0x08000139   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
-    __rt_final_cpp                           0x08000141   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
-    __rt_final_exit                          0x08000141   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
-    Reset_Handler                            0x08000145   Thumb Code     8  startup_stm32f103xe.o(.text)
-    ADC1_2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    ADC3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    CAN1_RX1_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    CAN1_SCE_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel4_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel5_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel6_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA1_Channel7_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA2_Channel1_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA2_Channel2_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA2_Channel3_IRQHandler                 0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    DMA2_Channel4_5_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI0_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI15_10_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI1_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI2_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI3_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    EXTI9_5_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    FLASH_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    FSMC_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    I2C1_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    I2C1_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    I2C2_ER_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    I2C2_EV_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    PVD_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    RCC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    RTC_Alarm_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    RTC_IRQHandler                           0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    SDIO_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    SPI1_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    SPI2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    SPI3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TAMPER_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM1_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM1_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM1_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM1_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM2_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM3_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM4_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM5_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM6_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM7_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM8_BRK_IRQHandler                      0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM8_CC_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM8_TRG_COM_IRQHandler                  0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    TIM8_UP_IRQHandler                       0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    UART4_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    UART5_IRQHandler                         0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USART1_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USART2_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USART3_IRQHandler                        0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USBWakeUp_IRQHandler                     0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USB_HP_CAN1_TX_IRQHandler                0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    USB_LP_CAN1_RX0_IRQHandler               0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    WWDG_IRQHandler                          0x0800015f   Thumb Code     0  startup_stm32f103xe.o(.text)
-    __aeabi_memset                           0x08000169   Thumb Code    14  memseta.o(.text)
-    __aeabi_memset4                          0x08000169   Thumb Code     0  memseta.o(.text)
-    __aeabi_memset8                          0x08000169   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr                           0x08000177   Thumb Code     4  memseta.o(.text)
-    __aeabi_memclr4                          0x08000177   Thumb Code     0  memseta.o(.text)
-    __aeabi_memclr8                          0x08000177   Thumb Code     0  memseta.o(.text)
-    _memset$wrapper                          0x0800017b   Thumb Code    18  memseta.o(.text)
-    __scatterload                            0x0800018d   Thumb Code    28  init.o(.text)
-    __scatterload_rt2                        0x0800018d   Thumb Code     0  init.o(.text)
-    BusFault_Handler                         0x080001b1   Thumb Code     2  stm32f1xx_it.o(i.BusFault_Handler)
-    DebugMon_Handler                         0x080001b3   Thumb Code     2  stm32f1xx_it.o(i.DebugMon_Handler)
-    HAL_Delay                                0x080001b5   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Delay)
-    HAL_GPIO_Init                            0x080001d9   Thumb Code   462  stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init)
-    HAL_GPIO_WritePin                        0x080003d1   Thumb Code    10  stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin)
-    HAL_GetTick                              0x080003dd   Thumb Code     6  stm32f1xx_hal.o(i.HAL_GetTick)
-    HAL_IncTick                              0x080003e9   Thumb Code    12  stm32f1xx_hal.o(i.HAL_IncTick)
-    HAL_Init                                 0x080003f9   Thumb Code    32  stm32f1xx_hal.o(i.HAL_Init)
-    HAL_InitTick                             0x0800041d   Thumb Code    54  stm32f1xx_hal.o(i.HAL_InitTick)
-    HAL_MspInit                              0x0800045d   Thumb Code    52  stm32f1xx_hal_msp.o(i.HAL_MspInit)
-    HAL_NVIC_SetPriority                     0x08000499   Thumb Code    60  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriority)
-    HAL_NVIC_SetPriorityGrouping             0x080004d9   Thumb Code    26  stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping)
-    HAL_RCC_ClockConfig                      0x080004fd   Thumb Code   280  stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig)
-    HAL_RCC_GetPCLK1Freq                     0x08000629   Thumb Code    20  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK1Freq)
-    HAL_RCC_GetPCLK2Freq                     0x08000649   Thumb Code    20  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetPCLK2Freq)
-    HAL_RCC_GetSysClockFreq                  0x08000669   Thumb Code    74  stm32f1xx_hal_rcc.o(i.HAL_RCC_GetSysClockFreq)
-    HAL_RCC_OscConfig                        0x080006d5   Thumb Code   778  stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig)
-    HAL_SPI_Init                             0x080009f5   Thumb Code   124  stm32f1xx_hal_spi.o(i.HAL_SPI_Init)
-    HAL_SPI_MspInit                          0x08000a71   Thumb Code    80  stm32f1xx_hal_msp.o(i.HAL_SPI_MspInit)
-    HAL_SPI_Transmit                         0x08000acd   Thumb Code   348  stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit)
-    HAL_SYSTICK_Config                       0x08000c29   Thumb Code    40  stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_Config)
-    HAL_UART_Init                            0x08000c51   Thumb Code    98  stm32f1xx_hal_uart.o(i.HAL_UART_Init)
-    HAL_UART_MspInit                         0x08000cb5   Thumb Code   100  stm32f1xx_hal_msp.o(i.HAL_UART_MspInit)
-    HAL_UART_Transmit                        0x08000d25   Thumb Code   186  stm32f1xx_hal_uart.o(i.HAL_UART_Transmit)
-    HardFault_Handler                        0x08000ddf   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
-    MemManage_Handler                        0x08000eb1   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
-    NMI_Handler                              0x08000eb3   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
-    PendSV_Handler                           0x08000eb5   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
-    ST7735_DrawPixel                         0x08000f6b   Thumb Code    60  st7735.o(i.ST7735_DrawPixel)
-    ST7735_FillRectangle                     0x08000fed   Thumb Code   144  st7735.o(i.ST7735_FillRectangle)
-    ST7735_FillScreen                        0x08001085   Thumb Code    18  st7735.o(i.ST7735_FillScreen)
-    ST7735_Init                              0x08001099   Thumb Code    64  st7735.o(i.ST7735_Init)
-    ST7735_Unselect                          0x0800113d   Thumb Code    10  st7735.o(i.ST7735_Unselect)
-    ST7735_WriteString                       0x0800122d   Thumb Code    94  st7735.o(i.ST7735_WriteString)
-    SVC_Handler                              0x0800128b   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
-    SysTick_Handler                          0x0800128d   Thumb Code     4  stm32f1xx_it.o(i.SysTick_Handler)
-    SystemClock_Config                       0x08001291   Thumb Code    66  main.o(i.SystemClock_Config)
-    SystemInit                               0x080012d5   Thumb Code    56  system_stm32f1xx.o(i.SystemInit)
-    UsageFault_Handler                       0x08001439   Thumb Code     2  stm32f1xx_it.o(i.UsageFault_Handler)
-    __scatterload_copy                       0x0800145b   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x08001469   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x0800146b   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    init                                     0x08001479   Thumb Code    30  main.o(i.init)
-    loop                                     0x080014a9   Thumb Code   448  main.o(i.loop)
-    main                                     0x08001711   Thumb Code    58  main.o(i.main)
-    AHBPrescTable                            0x08003fdd   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08003fed   Data           8  system_stm32f1xx.o(.constdata)
-    Region$$Table$$Base                      0x08003ff8   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x08004018   Number         0  anon$$obj.o(Region$$Table)
-    Font_7x10                                0x20000000   Data           8  fonts.o(.data)
-    Font_11x18                               0x20000008   Data           8  fonts.o(.data)
-    Font_16x26                               0x20000010   Data           8  fonts.o(.data)
-    uwTickFreq                               0x20000018   Data           1  stm32f1xx_hal.o(.data)
-    uwTickPrio                               0x2000001c   Data           4  stm32f1xx_hal.o(.data)
-    uwTick                                   0x20000020   Data           4  stm32f1xx_hal.o(.data)
-    SystemCoreClock                          0x20000024   Data           4  system_stm32f1xx.o(.data)
-    hspi1                                    0x20000028   Data          88  main.o(.bss)
-    huart2                                   0x20000080   Data          64  main.o(.bss)
-    __initial_sp                             0x200004c0   Data           0  startup_stm32f103xe.o(STACK)
-
-
-
-==============================================================================
-
-Memory Map of the image
-
-  Image Entry point : 0x08000131
-
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x00004040, Max: 0x00080000, ABSOLUTE)
-
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x00004018, Max: 0x00080000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x08000000   0x08000000   0x00000130   Data   RO            3    RESET               startup_stm32f103xe.o
-    0x08000130   0x08000130   0x00000000   Code   RO         2144  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x08000130   0x08000130   0x00000004   Code   RO         2151    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x08000134   0x08000134   0x00000004   Code   RO         2154    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         2156    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x08000138   0x08000138   0x00000000   Code   RO         2158    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x08000138   0x08000138   0x00000008   Code   RO         2159    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         2161    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x08000140   0x08000140   0x00000000   Code   RO         2163    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x08000140   0x08000140   0x00000004   Code   RO         2152    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000144   0x08000144   0x00000024   Code   RO            4    .text               startup_stm32f103xe.o
-    0x08000168   0x08000168   0x00000024   Code   RO         2149    .text               mc_w.l(memseta.o)
-    0x0800018c   0x0800018c   0x00000024   Code   RO         2165    .text               mc_w.l(init.o)
-    0x080001b0   0x080001b0   0x00000002   Code   RO          168    i.BusFault_Handler  stm32f1xx_it.o
-    0x080001b2   0x080001b2   0x00000002   Code   RO          169    i.DebugMon_Handler  stm32f1xx_it.o
-    0x080001b4   0x080001b4   0x00000024   Code   RO         1141    i.HAL_Delay         stm32f1xx_hal.o
-    0x080001d8   0x080001d8   0x000001f8   Code   RO         1449    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
-    0x080003d0   0x080003d0   0x0000000a   Code   RO         1453    i.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
-    0x080003da   0x080003da   0x00000002   PAD
-    0x080003dc   0x080003dc   0x0000000c   Code   RO         1145    i.HAL_GetTick       stm32f1xx_hal.o
-    0x080003e8   0x080003e8   0x00000010   Code   RO         1151    i.HAL_IncTick       stm32f1xx_hal.o
-    0x080003f8   0x080003f8   0x00000024   Code   RO         1152    i.HAL_Init          stm32f1xx_hal.o
-    0x0800041c   0x0800041c   0x00000040   Code   RO         1153    i.HAL_InitTick      stm32f1xx_hal.o
-    0x0800045c   0x0800045c   0x0000003c   Code   RO          243    i.HAL_MspInit       stm32f1xx_hal_msp.o
-    0x08000498   0x08000498   0x00000040   Code   RO         1615    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x080004d8   0x080004d8   0x00000024   Code   RO         1616    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
-    0x080004fc   0x080004fc   0x0000012c   Code   RO         1309    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
-    0x08000628   0x08000628   0x00000020   Code   RO         1316    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
-    0x08000648   0x08000648   0x00000020   Code   RO         1317    i.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
-    0x08000668   0x08000668   0x0000006c   Code   RO         1318    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
-    0x080006d4   0x080006d4   0x00000320   Code   RO         1321    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
-    0x080009f4   0x080009f4   0x0000007c   Code   RO          461    i.HAL_SPI_Init      stm32f1xx_hal_spi.o
-    0x08000a70   0x08000a70   0x0000005c   Code   RO          245    i.HAL_SPI_MspInit   stm32f1xx_hal_msp.o
-    0x08000acc   0x08000acc   0x0000015c   Code   RO          469    i.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
-    0x08000c28   0x08000c28   0x00000028   Code   RO         1620    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
-    0x08000c50   0x08000c50   0x00000062   Code   RO          833    i.HAL_UART_Init     stm32f1xx_hal_uart.o
-    0x08000cb2   0x08000cb2   0x00000002   PAD
-    0x08000cb4   0x08000cb4   0x00000070   Code   RO          247    i.HAL_UART_MspInit  stm32f1xx_hal_msp.o
-    0x08000d24   0x08000d24   0x000000ba   Code   RO          841    i.HAL_UART_Transmit  stm32f1xx_hal_uart.o
-    0x08000dde   0x08000dde   0x00000002   Code   RO          170    i.HardFault_Handler  stm32f1xx_it.o
-    0x08000de0   0x08000de0   0x00000098   Code   RO           14    i.MX_GPIO_Init      main.o
-    0x08000e78   0x08000e78   0x00000038   Code   RO           15    i.MX_SPI1_Init      main.o
-    0x08000eb0   0x08000eb0   0x00000002   Code   RO          171    i.MemManage_Handler  stm32f1xx_it.o
-    0x08000eb2   0x08000eb2   0x00000002   Code   RO          172    i.NMI_Handler       stm32f1xx_it.o
-    0x08000eb4   0x08000eb4   0x00000002   Code   RO          173    i.PendSV_Handler    stm32f1xx_it.o
-    0x08000eb6   0x08000eb6   0x00000020   Code   RO          499    i.SPI_EndRxTxTransaction  stm32f1xx_hal_spi.o
-    0x08000ed6   0x08000ed6   0x00000094   Code   RO          504    i.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
-    0x08000f6a   0x08000f6a   0x0000003c   Code   RO          309    i.ST7735_DrawPixel  st7735.o
-    0x08000fa6   0x08000fa6   0x00000046   Code   RO          310    i.ST7735_ExecuteCommandList  st7735.o
-    0x08000fec   0x08000fec   0x00000098   Code   RO          311    i.ST7735_FillRectangle  st7735.o
-    0x08001084   0x08001084   0x00000012   Code   RO          312    i.ST7735_FillScreen  st7735.o
-    0x08001096   0x08001096   0x00000002   PAD
-    0x08001098   0x08001098   0x00000048   Code   RO          313    i.ST7735_Init       st7735.o
-    0x080010e0   0x080010e0   0x00000010   Code   RO          315    i.ST7735_Select     st7735.o
-    0x080010f0   0x080010f0   0x0000004a   Code   RO          316    i.ST7735_SetAddressWindow  st7735.o
-    0x0800113a   0x0800113a   0x00000002   PAD
-    0x0800113c   0x0800113c   0x00000010   Code   RO          317    i.ST7735_Unselect   st7735.o
-    0x0800114c   0x0800114c   0x00000090   Code   RO          318    i.ST7735_WriteChar  st7735.o
-    0x080011dc   0x080011dc   0x00000024   Code   RO          319    i.ST7735_WriteCommand  st7735.o
-    0x08001200   0x08001200   0x0000002c   Code   RO          320    i.ST7735_WriteData  st7735.o
-    0x0800122c   0x0800122c   0x0000005e   Code   RO          321    i.ST7735_WriteString  st7735.o
-    0x0800128a   0x0800128a   0x00000002   Code   RO          174    i.SVC_Handler       stm32f1xx_it.o
-    0x0800128c   0x0800128c   0x00000004   Code   RO          175    i.SysTick_Handler   stm32f1xx_it.o
-    0x08001290   0x08001290   0x00000042   Code   RO           16    i.SystemClock_Config  main.o
-    0x080012d2   0x080012d2   0x00000002   PAD
-    0x080012d4   0x080012d4   0x00000048   Code   RO         2110    i.SystemInit        system_stm32f1xx.o
-    0x0800131c   0x0800131c   0x000000b8   Code   RO          859    i.UART_SetConfig    stm32f1xx_hal_uart.o
-    0x080013d4   0x080013d4   0x00000064   Code   RO          861    i.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
-    0x08001438   0x08001438   0x00000002   Code   RO          176    i.UsageFault_Handler  stm32f1xx_it.o
-    0x0800143a   0x0800143a   0x00000020   Code   RO         1622    i.__NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x0800145a   0x0800145a   0x0000000e   Code   RO         2169    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001468   0x08001468   0x00000002   Code   RO         2170    i.__scatterload_null  mc_w.l(handlers.o)
-    0x0800146a   0x0800146a   0x0000000e   Code   RO         2171    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001478   0x08001478   0x00000030   Code   RO           17    i.init              main.o
-    0x080014a8   0x080014a8   0x00000268   Code   RO           18    i.loop              main.o
-    0x08001710   0x08001710   0x00000044   Code   RO           19    i.main              main.o
-    0x08001754   0x08001754   0x0000076c   Data   RO          288    .constdata          fonts.o
-    0x08001ec0   0x08001ec0   0x00000d5c   Data   RO          289    .constdata          fonts.o
-    0x08002c1c   0x08002c1c   0x0000134c   Data   RO          290    .constdata          fonts.o
-    0x08003f68   0x08003f68   0x00000075   Data   RO          322    .constdata          st7735.o
-    0x08003fdd   0x08003fdd   0x00000010   Data   RO         2111    .constdata          system_stm32f1xx.o
-    0x08003fed   0x08003fed   0x00000008   Data   RO         2112    .constdata          system_stm32f1xx.o
-    0x08003ff5   0x08003ff5   0x00000003   PAD
-    0x08003ff8   0x08003ff8   0x00000020   Data   RO         2167    Region$$Table       anon$$obj.o
-
-
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x08004018, Size: 0x000004c0, Max: 0x00010000, ABSOLUTE)
-
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
-
-    0x20000000   0x08004018   0x00000008   Data   RW          291    .data               fonts.o
-    0x20000008   0x08004020   0x00000008   Data   RW          292    .data               fonts.o
-    0x20000010   0x08004028   0x00000008   Data   RW          293    .data               fonts.o
-    0x20000018   0x08004030   0x0000000c   Data   RW         1159    .data               stm32f1xx_hal.o
-    0x20000024   0x0800403c   0x00000004   Data   RW         2113    .data               system_stm32f1xx.o
-    0x20000028        -       0x00000098   Zero   RW           20    .bss                main.o
-    0x200000c0        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xe.o
-
-
-==============================================================================
-
-Image component sizes
-
-
-      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
-
-         0          0      10260         24          0        966   fonts.o
-      1006        218          0          0        152     463647   main.o
-       796         46        117          0          0       8145   st7735.o
-        36          8        304          0       1024        784   startup_stm32f103xe.o
-       164         28          0         12          0       6889   stm32f1xx_hal.o
-       172         14          0          0          0      28698   stm32f1xx_hal_cortex.o
-       514         42          0          0          0       3108   stm32f1xx_hal_gpio.o
-       264         32          0          0          0       2115   stm32f1xx_hal_msp.o
-      1272        100          0          0          0       5548   stm32f1xx_hal_rcc.o
-       652          0          0          0          0       4526   stm32f1xx_hal_spi.o
-       568          6          0          0          0       4228   stm32f1xx_hal_uart.o
-        20          0          0          0          0       3614   stm32f1xx_it.o
-        72         16         24          4          0       1155   system_stm32f1xx.o
-
-    ----------------------------------------------------------------------
-      5546        510      10740         40       1176     533423   Object Totals
-         0          0         32          0          0          0   (incl. Generated)
-        10          0          3          0          0          0   (incl. Padding)
-
-    ----------------------------------------------------------------------
-
-      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
-
-         0          0          0          0          0          0   entry.o
-         0          0          0          0          0          0   entry10a.o
-         0          0          0          0          0          0   entry11a.o
-         8          4          0          0          0          0   entry2.o
-         4          0          0          0          0          0   entry5.o
-         0          0          0          0          0          0   entry7b.o
-         0          0          0          0          0          0   entry8b.o
-         8          4          0          0          0          0   entry9a.o
-        30          0          0          0          0          0   handlers.o
-        36          8          0          0          0         68   init.o
-        36          0          0          0          0        108   memseta.o
-
-    ----------------------------------------------------------------------
-       122         16          0          0          0        176   Library Totals
-         0          0          0          0          0          0   (incl. Padding)
-
-    ----------------------------------------------------------------------
-
-      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
-
-       122         16          0          0          0        176   mc_w.l
-
-    ----------------------------------------------------------------------
-       122         16          0          0          0        176   Library Totals
-
-    ----------------------------------------------------------------------
-
-==============================================================================
-
-
-      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
-
-      5668        526      10740         40       1176     531099   Grand Totals
-      5668        526      10740         40       1176     531099   ELF Image Totals
-      5668        526      10740         40          0          0   ROM Totals
-
-==============================================================================
-
-    Total RO  Size (Code + RO Data)                16408 (  16.02kB)
-    Total RW  Size (RW Data + ZI Data)              1216 (   1.19kB)
-    Total ROM Size (Code + RO Data + RW Data)      16448 (  16.06kB)
-
-==============================================================================
-
+572 unused section(s) (total 40773 bytes) removed from the image.
